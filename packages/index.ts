@@ -3,11 +3,19 @@ import type { SFCWithInstall } from '@/utils/types'
 import '@/scss/index.scss'
 import Button from './button'
 import Tag from './tag'
+import Radio from './radio'
+import RadioGroup from './radio-group'
+import Check from './checkbox'
+import CheckGroup from './checkbox-group'
 
 // 存储组件列表
 const components = [
   Button,
   Tag,
+  Radio,
+  RadioGroup,
+  Check,
+  CheckGroup,
 ];
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
@@ -17,7 +25,11 @@ const install = (app: App): void => {
 };
 
 export const UrButton: SFCWithInstall<typeof Button> = Button
-export const UrTag: SFCWithInstall<typeof Button> = Tag
+export const UrTag: SFCWithInstall<typeof Tag> = Tag
+export const UrRadio: SFCWithInstall<typeof Radio> = Radio
+export const UrRadioGroup: SFCWithInstall<typeof RadioGroup> = RadioGroup
+export const UrCheck: SFCWithInstall<typeof Check> = Check
+export const UrCheckGroup: SFCWithInstall<typeof CheckGroup> = CheckGroup
 
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
@@ -25,4 +37,8 @@ export default {
   // 以下是具体的组件列表
   UrButton,
   UrTag,
+  UrRadio,
+  UrRadioGroup,
+  UrCheck,
+  UrCheckGroup,
 };

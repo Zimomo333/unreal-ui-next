@@ -1,24 +1,81 @@
 <template>
-  <div>
-    <p class="title">按钮</p>
-    <ur-button class="button-demo" size="large">超大尺寸</ur-button>
-    <ur-button class="button-demo" size="medium">中等尺寸</ur-button>
-    <ur-button class="button-demo" size="small">小型尺寸</ur-button>
-    <ur-button class="button-demo" size="mini">超小尺寸</ur-button>
-    <ur-button class="button-demo" :loading="true">加载中...</ur-button>
-    <ur-button class="button-demo active">按下</ur-button>
-  </div>
-  <div>
-    <p class="title">标签</p>
-    <ur-tag
-      class="tag-demo"
-      v-for="tag in tags"
-      :key="tag.name"
-      closable
-      @close="handleClose"
-      :type="tag.type">
-      {{tag.name}}
-    </ur-tag>
+  <div id="app">
+    <div>
+      <p class="title">按钮</p>
+      <ur-button class="button-demo" size="large">超大尺寸</ur-button>
+      <ur-button class="button-demo" size="medium">中等尺寸</ur-button>
+      <ur-button class="button-demo" size="small">小型尺寸</ur-button>
+      <ur-button class="button-demo" size="mini">超小尺寸</ur-button>
+      <ur-button class="button-demo" :loading="true">Loading...</ur-button>
+      <ur-button class="button-demo active">按下</ur-button>
+    </div>
+    <div>
+      <p class="title">输入框</p>
+      <ur-input class="input-demo" v-model="input" placeholder="请输入内容" clearable>
+        <template slot="prepend">Http://</template>
+      </ur-input>
+      <br>
+      <ur-input class="input-demo" placeholder="请输入内容" clearable>
+        <template slot="append">.com</template>
+      </ur-input>
+      <br>
+      <ur-input class="input-demo" v-model="input" placeholder="请输入内容" show-password>
+        <template slot="prepend">密码</template>
+        <ur-button slot="append">提交</ur-button>
+      </ur-input>
+    </div>
+    <div>
+      <p class="title">标签</p>
+      <ur-tag
+        class="tag-demo"
+        v-for="tag in tags"
+        :key="tag.name"
+        closable
+        @close="handleClose"
+        :type="tag.type">
+        {{tag.name}}
+      </ur-tag>
+    </div>
+
+    <div style="padding-bottom: 20rem;">
+      <p class="title">下拉框多选</p>
+      <ur-select v-model="value" multiple placeholder="请选择">
+        <ur-option
+          v-for="item in options"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value">
+        </ur-option>
+      </ur-select>
+    </div>
+    <div>
+      <p class="title">面包屑</p>
+      <ur-breadcrumb separator="/">
+        <ur-breadcrumb-item :to="{ path: '/' }">首页</ur-breadcrumb-item>
+        <ur-breadcrumb-item><a href="/">活动管理</a></ur-breadcrumb-item>
+        <ur-breadcrumb-item>活动列表</ur-breadcrumb-item>
+      </ur-breadcrumb>
+    </div>
+    <div>
+      <p class="title">单选框</p>
+      <ur-radio-group v-model="radio">
+        <ur-radio :label="3">备选项</ur-radio>
+        <ur-radio :label="6">备选项</ur-radio>
+        <ur-radio :label="9">备选项</ur-radio>
+      </ur-radio-group>
+      <p class="title">多选框</p>
+      <ur-checkbox-group v-model="checkList">
+        <ur-checkbox label="复选框 A"></ur-checkbox>
+        <ur-checkbox label="复选框 B"></ur-checkbox>
+        <ur-checkbox label="复选框 C"></ur-checkbox>
+        <ur-checkbox label="禁用" disabled></ur-checkbox>
+        <ur-checkbox label="选中且禁用" disabled></ur-checkbox>
+      </ur-checkbox-group>
+    </div>
+    <div>
+      <p class="title">跑马灯</p>
+      <test-carousel></test-carousel>
+    </div>
   </div>
 </template>
 
@@ -31,6 +88,7 @@ export default defineComponent({
   },
   data() {
     return {
+      input: '',
       tags: [
         { name: '标签一', type: '' },
         { name: '标签二', type: 'success' },
@@ -38,6 +96,37 @@ export default defineComponent({
         { name: '标签四', type: 'warning' },
         { name: '标签五', type: 'danger' }
       ],
+      options: [{
+        value: '选项1',
+        label: '选项1'
+      }, {
+        value: '选项2',
+        label: '选项2'
+      }, {
+        value: '选项3',
+        label: '选项3'
+      }, {
+        value: '选项4',
+        label: '选项4'
+      }, {
+        value: '选项5',
+        label: '选项5'
+      }, {
+        value: '选项6',
+        label: '选项6'
+      }, {
+        value: '选项7',
+        label: '选项7'
+      }, {
+        value: '选项8',
+        label: '选项8'
+      }, {
+        value: '选项9',
+        label: '选项9'
+      }],
+      value: '',
+      radio: 3,
+      checkList: ['选中且禁用','复选框 A'],
     }
   },
   methods: {

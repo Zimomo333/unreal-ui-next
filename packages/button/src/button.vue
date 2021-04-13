@@ -30,7 +30,7 @@ import { isValidComponentSize } from '@/utils/validators'
 import { urFormKey, urFormItemKey } from '@/packages/form'
 
 import type { PropType } from 'vue'
-import type { ElFormContext, ElFormItemContext } from '@/packages/form'
+import type { UrFormContext, UrFormItemContext } from '@/packages/form'
 
 type IButtonType = PropType<'primary' | 'success' | 'warning' | 'danger' | 'info' | 'text' | 'default'>
 type IButtonNativeType = PropType<'button' | 'submit' | 'reset'>
@@ -97,8 +97,8 @@ export default defineComponent({
   setup(props, ctx) {
     const $ELEMENT = useGlobalConfig()
 
-    const urForm = inject(urFormKey, {} as ElFormContext)
-    const urFormItem = inject(urFormItemKey, {} as ElFormItemContext)
+    const urForm = inject(urFormKey, {} as UrFormContext)
+    const urFormItem = inject(urFormItemKey, {} as UrFormItemContext)
 
     const buttonSize = computed(() => {
       return props.size || urFormItem.size || $ELEMENT.size
