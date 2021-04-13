@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import styleImport from 'vite-plugin-style-import'
+import styleImport from 'vite-plugin-style-import';
 const path = require('path')
 const fs = require('fs')
 
@@ -29,13 +29,8 @@ export default defineConfig({
       libs: [
         {
           libraryName: 'unreal-ui-next',
-          esModule: true,
-          ensureStyleFile: true,
           resolveStyle: (name) => {
             return `unreal-ui-next/lib/${name}/style.css`;
-          },
-          resolveComponent: (name) => {
-            return `unreal-ui-next/lib/${name}`;
           },
         }
       ]
@@ -53,8 +48,8 @@ export default defineConfig({
       },
       external: ['vue'],
       output: {
-        entryFileNames: '[name]/index.js',
-        assetFileNames: '[name]/style.css',
+        entryFileNames: 'ur-[name]/index.js',
+        assetFileNames: 'ur-[name]/style.css',
         chunkFileNames: 'utils/[name].js',
         globals: {
           vue: 'Vue'

@@ -16,13 +16,13 @@ const install = (app: App): void => {
   components.map((component) => app.component(component.name, component));
 };
 
-const _Button: SFCWithInstall<typeof Button> = Button
-const _Tag: SFCWithInstall<typeof Button> = Tag
+export const UrButton: SFCWithInstall<typeof Button> = Button
+export const UrTag: SFCWithInstall<typeof Button> = Tag
 
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
   install,
   // 以下是具体的组件列表
-  _Button,
-  _Tag,
+  UrButton,
+  UrTag,
 };
