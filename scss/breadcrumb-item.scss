@@ -1,0 +1,14 @@
+.ur-breadcrumb__item {
+  float: left;
+}
+.ur-breadcrumb__item:last-child .ur-breadcrumb__inner,
+.ur-breadcrumb__item:last-child .ur-breadcrumb__inner a,
+.ur-breadcrumb__item:last-child .ur-breadcrumb__inner a:hover,
+.ur-breadcrumb__item:last-child .ur-breadcrumb__inner:hover {
+  font-weight: 400;
+  color: #606266;
+  cursor: text;
+}
+.ur-breadcrumb__item:last-child .ur-breadcrumb__separator {
+  display: none;
+}
