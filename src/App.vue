@@ -12,16 +12,18 @@
     <div>
       <p class="title">输入框</p>
       <ur-input class="input-demo" v-model="input" placeholder="请输入内容" clearable>
-        <template slot="prepend">Http://</template>
+        <template #prepend>Http://</template>
       </ur-input>
       <br>
       <ur-input class="input-demo" placeholder="请输入内容" clearable>
-        <template slot="append">.com</template>
+        <template #append>.com</template>
       </ur-input>
       <br>
       <ur-input class="input-demo" v-model="input" placeholder="请输入内容" show-password>
-        <template slot="prepend">密码</template>
-        <ur-button slot="append">提交</ur-button>
+        <template #prepend>密码</template>
+        <template #append>
+          <ur-button>提交</ur-button>
+        </template>
       </ur-input>
     </div>
     <div>

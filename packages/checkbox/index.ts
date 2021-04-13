@@ -1,5 +1,5 @@
 import { App } from 'vue'
-import type { SFCWithInstall } from '@element-plus/utils/types'
+import type { SFCWithInstall } from '@/utils/types'
 import Checkbox from './src/checkbox.vue'
 import '@/scss/checkbox.scss'
 
