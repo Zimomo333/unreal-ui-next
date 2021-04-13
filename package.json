@@ -13,8 +13,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.4.4",
     "async-validator": "^3.4.0",
-    "mitt": "^2.1.0"
+    "mitt": "^2.1.0",
+    "resize-observer-polyfill": "^1.5.1",
+    "dayjs": "1.x",
+    "normalize-wheel": "^1.0.1"
   },
   "peerDependencies": {
     "vue": "^3.0.5"
