@@ -4,6 +4,7 @@ src
 scss
 packages
 utils/
+assets
 vite.config.ts
 tsconfig.json
 *.map

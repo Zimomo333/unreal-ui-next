@@ -83,10 +83,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import TestCarousel from './components/carousel.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
+    TestCarousel,
   },
   data() {
     return {

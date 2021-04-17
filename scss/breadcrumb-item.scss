@@ -1,5 +1,12 @@
 .ur-breadcrumb__item {
   float: left;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 .ur-breadcrumb__item:last-child .ur-breadcrumb__inner,
 .ur-breadcrumb__item:last-child .ur-breadcrumb__inner a,

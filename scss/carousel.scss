@@ -1,0 +1,126 @@
+.ur-carousel {
+  position: relative;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff;
+  border-radius: 0.55rem;
+  border-color: #d1d9e6;
+  border: 0.0625rem solid #fafbfe;
+
+  &.ur-carousel--horizontal {
+    overflow-x: hidden;
+
+    .carousel-indicators {
+      bottom: 0.4rem;
+      width: 100%;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      height: 100%;
+      align-items: center;
+
+      .icon-wrap {
+        padding: 0.4rem;
+      }
+    }
+
+    .carousel-control-prev {
+      left: 0.6rem;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    .carousel-control-next {
+      right: 0.6rem;
+    }
+  }
+
+  &.ur-carousel--vertical {
+    overflow-y: hidden;
+
+    .carousel-indicators {
+      right: 0.4rem;
+      height: 100%;
+      flex-direction: column;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 100%;
+      justify-content: center;
+
+      .icon-wrap {
+        padding: 0 0.8rem;
+      }
+    }
+
+    .carousel-control-prev {
+      top: 0.6rem;
+
+      svg {
+        transform: rotate(270deg);
+      }
+    }
+
+    .carousel-control-next {
+      bottom: 0.6rem;
+      
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+
+    li {
+      height: 1.2rem;
+      width: 1.2rem;
+      background: transparent;
+      margin: 0.4rem;
+      border: 0;
+      border-radius: 50%;
+      box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
+      cursor: pointer;
+
+      &.active {
+        box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
+      }
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    color: #ecf0f3;
+
+    .icon-wrap{
+      border: 0;
+      box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      background: transparent;
+      
+      .icon {
+        display: inline-block;
+        width: 1rem;
+        height: 1.7rem;
+      }
+      
+      &:active {
+        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
+      }
+    }
+  }
+}
