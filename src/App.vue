@@ -75,6 +75,14 @@
       </ur-checkbox-group>
     </div>
     <div>
+      <p class="title">分页</p>
+      <ur-pagination
+        background
+        layout="prev, pager, next, jumper"
+        :total="50">
+      </ur-pagination>
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <test-carousel></test-carousel>
     </div>

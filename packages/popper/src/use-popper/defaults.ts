@@ -126,7 +126,7 @@ export default {
   },
   transition: {
     type: String,
-    default: 'el-fade-in-linear',
+    default: 'ur-fade-in-linear',
   },
   trigger: {
     type: [String, Array] as PropType<Trigger>,

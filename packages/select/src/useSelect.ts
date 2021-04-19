@@ -555,7 +555,7 @@ export const useSelect = (props, states: States, ctx) => {
     }
 
     if (popper.value && target) {
-      const menu = popper.value?.popperRef?.querySelector?.('.el-select-dropdown__wrap')
+      const menu = popper.value?.popperRef?.querySelector?.('.ur-select-dropdown__wrap')
       if (menu) {
         scrollIntoView(menu, target)
       }

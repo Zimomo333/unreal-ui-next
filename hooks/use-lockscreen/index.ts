@@ -33,14 +33,14 @@ export default (trigger: Ref<boolean>) => {
   })
 
   const cleanup = () => {
-    removeClass(document.body, 'el-popup-parent--hidden')
+    removeClass(document.body, 'ur-popup-parent--hidden')
     if (withoutHiddenClass) {
       document.body.style.paddingRight = bodyPaddingRight
     }
   }
   watch(trigger, val => {
     if (val) {
-      withoutHiddenClass = !hasClass(document.body, 'el-popup-parent--hidden')
+      withoutHiddenClass = !hasClass(document.body, 'ur-popup-parent--hidden')
       if (withoutHiddenClass) {
         bodyPaddingRight = document.body.style.paddingRight
         computedBodyPaddingRight = parseInt(
@@ -60,7 +60,7 @@ export default (trigger: Ref<boolean>) => {
         document.body.style.paddingRight =
           computedBodyPaddingRight + scrollBarWidth + 'px'
       }
-      addClass(document.body, 'el-popup-parent--hidden')
+      addClass(document.body, 'ur-popup-parent--hidden')
     } else {
       cleanup()
     }
