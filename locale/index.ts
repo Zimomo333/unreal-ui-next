@@ -1,4 +1,4 @@
-import defaultLang from './lang/en'
+import defaultLang from './lang/zh-cn'
 import dayjs from 'dayjs'
 
 

@@ -78,7 +78,7 @@
       <p class="title">分页</p>
       <ur-pagination
         background
-        layout="prev, pager, next, jumper"
+        layout="total, sizes, prev, pager, next, jumper"
         :total="50">
       </ur-pagination>
     </div>
