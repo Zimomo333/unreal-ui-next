@@ -1,0 +1,202 @@
+.ur-input-number {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  line-height: 38px;
+
+  .ur-input {
+    display: block;
+  }
+
+  .ur-input__inner {
+    -webkit-appearance: none;
+    width: 7rem;
+    text-align: center;
+  }
+}
+
+.ur-input-number__decrease,
+.ur-input-number__increase {
+  position: absolute;
+  z-index: 1;
+  width: 40px;
+  text-align: center;
+  color: #606266;
+  cursor: pointer;
+  font-size: 13px;
+  height: 100%;
+
+  .ur-icon-minus, .ur-icon-plus {
+    height: 100%;
+  }
+  .ur-icon-arrow-down, .ur-icon-arrow-up {
+    height: 50%;
+  }
+}
+
+.ur-input-number__decrease.is-disabled {
+  color: #c0c4cc;
+  cursor: not-allowed;
+}
+
+.ur-input-number__increase {
+  &.is-disabled {
+    color: #c0c4cc;
+    cursor: not-allowed;
+  }
+
+  right: 0;
+
+  .ur-icon-plus {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.ur-input-number__decrease {
+  left: 0;
+
+  .ur-icon-minus {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.ur-input-number.is-disabled {
+  .ur-input-number__decrease,
+  .ur-input-number__increase {
+    border-color: #e4e7ed;
+    color: #e4e7ed;
+  }
+
+  .ur-input-number__decrease:hover,
+  .ur-input-number__increase:hover {
+    color: #e4e7ed;
+    cursor: not-allowed;
+  }
+}
+
+.ur-input-number--medium {
+  width: 200px;
+  line-height: 34px;
+
+  .ur-input-number__decrease,
+  .ur-input-number__increase {
+    width: 36px;
+    font-size: 14px;
+  }
+
+  .ur-input__inner {
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+}
+
+.ur-input-number--small {
+  width: 130px;
+  line-height: 30px;
+
+  .ur-input-number__decrease,
+  .ur-input-number__increase {
+    width: 32px;
+    font-size: 13px;
+  }
+
+  .ur-input-number__decrease [class*='ur-icon'],
+  .ur-input-number__increase [class*='ur-icon'] {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  .ur-input__inner {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+}
+
+.ur-input-number--mini {
+  width: 130px;
+  line-height: 26px;
+
+  .ur-input-number__decrease,
+  .ur-input-number__increase {
+    width: 28px;
+    font-size: 12px;
+  }
+
+  .ur-input__inner {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+.ur-input-number {
+  &.is-without-controls .ur-input__inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &.is-controls-right {
+    .ur-input__inner {
+      width: 7rem;
+    }
+
+    .ur-input-number__decrease,
+    .ur-input-number__increase {
+      line-height: 19px;
+      height: 50%;
+
+      .ur-button {
+        width: 100%;
+        padding: .1rem 0 0 0;
+      }
+    }
+
+    .ur-input-number__increase {
+      .ur-icon-arrow-up {
+        height: 100%;
+        border-bottom: 0;
+        border-radius: 0 0.55rem 0 0;
+        box-shadow: 3px 0 6px #b8b9be, -3px -3px 6px #ffffff;
+        &:active {
+          box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
+        }
+      }
+    }
+    
+    .ur-input-number__decrease {
+      right: 0;
+      bottom: 0;
+      top: auto;
+      left: auto;
+      border-right: none;
+      border-radius: 0 0 4px;
+      
+      .ur-icon-arrow-down {
+        height: 100%;
+        border-radius: 0 0 0.55rem 0;
+      }
+    }
+
+    &[class*='medium'] {
+      [class*='decrease'],
+      [class*='increase'] {
+        line-height: 17px;
+      }
+    }
+
+    &[class*='small'] {
+      [class*='decrease'],
+      [class*='increase'] {
+        line-height: 15px;
+      }
+    }
+
+    &[class*='mini'] {
+      [class*='decrease'],
+      [class*='increase'] {
+        line-height: 13px;
+      }
+    }
+  }
+}

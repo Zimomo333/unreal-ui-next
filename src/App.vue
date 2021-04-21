@@ -91,6 +91,16 @@
       />
     </div>
     <div>
+      <p class="title">计数器</p>
+      <ur-input-number
+        controls-position="right"
+        v-model="inputNumber"
+        :min="1"
+        :max="10"
+        label="描述文字"
+      />
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <test-carousel></test-carousel>
     </div>
@@ -148,6 +158,7 @@ export default defineComponent({
       radio: 3,
       checkList: ['选中且禁用','复选框 A'],
       switchValue: true,
+      inputNumber: 1,
     }
   },
   methods: {
