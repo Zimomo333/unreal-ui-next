@@ -1,0 +1,81 @@
+.ur-popper__arrow {
+  display: none;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+
+  &::before {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: -1;
+  }
+}
+
+.ur-popper {
+  position: absolute;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 2000;
+  font-size: 12px;
+  line-height: 1.2;
+  min-width: 10px;
+  word-wrap: break-word;
+  visibility: visible;
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
+  background-color: #e6e7ee;
+
+  &.is-pure {
+    padding: 0;
+  }
+}
+
+.ur-popper__arrow::before {
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: #303133;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ur-popper {
+  &[data-popper-placement^=top] > .ur-popper__arrow {
+    bottom: -5px;
+  }
+
+  &[data-popper-placement^=bottom] > .ur-popper__arrow {
+    top: -5px;
+  }
+
+  &[data-popper-placement^=left] > .ur-popper__arrow {
+    right: -5px;
+  }
+
+  &[data-popper-placement^=right] > .ur-popper__arrow {
+    left: -5px;
+  }
+
+  &.is-light {
+    &[data-popper-placement^=top] .ur-popper__arrow::before {
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
+
+    &[data-popper-placement^=bottom] .ur-popper__arrow::before {
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+    }
+
+    &[data-popper-placement^=left] .ur-popper__arrow::before {
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+    }
+
+    &[data-popper-placement^=right] .ur-popper__arrow::before {
+      border-right-color: transparent;
+      border-top-color: transparent;
+    }
+  }
+}

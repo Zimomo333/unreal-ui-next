@@ -101,6 +101,12 @@
       />
     </div>
     <div>
+      <p class="title">气泡</p>
+      <ur-tooltip class="item" content="Top Left 提示文字" placement="right">
+        <ur-button>上左</ur-button>
+      </ur-tooltip>
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <test-carousel></test-carousel>
     </div>

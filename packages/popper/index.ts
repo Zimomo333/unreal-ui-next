@@ -1,6 +1,7 @@
 import type { App } from 'vue'
 import type { SFCWithInstall } from '@/utils/types'
 import Popper from './src/index.vue'
+import '@/scss/popper.scss'
 
 Popper.install = (app: App): void => {
   app.component(Popper.name, Popper)
