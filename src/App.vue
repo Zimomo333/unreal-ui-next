@@ -83,6 +83,14 @@
       </ur-pagination>
     </div>
     <div>
+      <p class="title">开关</p>
+      <ur-switch
+        v-model="switchValue"
+        active-text="按月付费"
+        inactive-text="按年付费"
+      />
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <test-carousel></test-carousel>
     </div>
@@ -139,6 +147,7 @@ export default defineComponent({
       value: '',
       radio: 3,
       checkList: ['选中且禁用','复选框 A'],
+      switchValue: true,
     }
   },
   methods: {
