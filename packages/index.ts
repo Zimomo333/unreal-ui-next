@@ -20,6 +20,7 @@ import InputNumber from './input-number'
 import Tooltip from './tooltip'
 import Slider from './slider'
 import Progress from './progress'
+import Notify from './notification'
 
 // 存储组件列表
 const components = [
@@ -44,10 +45,16 @@ const components = [
   Progress,
 ];
 
+const plugins = [
+  Notify,
+]
+
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = (app: App): void => {
   // 遍历注册全局组件
   components.map((component) => app.component(component.name, component));
+  // 插件需要直接use
+  plugins.map((plugin) => app.use(plugin));
 };
 
 export const UrButton: SFCWithInstall<typeof Button> = Button
@@ -69,6 +76,7 @@ export const UrInputNumber: SFCWithInstall<typeof InputNumber> = InputNumber
 export const UrTooltip: SFCWithInstall<typeof Tooltip> = Tooltip
 export const UrSlider: SFCWithInstall<typeof Slider> = Slider
 export const UrProgress: SFCWithInstall<typeof Progress> = Progress
+export const UrNotify: SFCWithInstall<typeof Notify> = Notify
 
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
@@ -93,4 +101,5 @@ export default {
   UrTooltip,
   UrSlider,
   UrProgress,
+  UrNotify,
 };

@@ -1,0 +1,110 @@
+.ur-notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 330px;
+  padding: 14px 26px 14px 13px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0.0625rem solid #D1D9E6;
+  border-radius: 0.55rem;
+  position: fixed;
+  background-color: #e6e7ee;
+  box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
+  -webkit-box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
+  -webkit-transition: opacity .3s,left .3s,right .3s,top .4s,bottom .3s,-webkit-transform .3s;
+  transition: opacity .3s,left .3s,right .3s,top .4s,bottom .3s,-webkit-transform .3s;
+  transition: opacity .3s,transform .3s,left .3s,right .3s,top .4s,bottom .3s;
+  transition: opacity .3s,transform .3s,left .3s,right .3s,top .4s,bottom .3s,-webkit-transform .3s;
+  overflow-wrap: anywhere;
+  overflow: hidden;
+  z-index: 9999;
+
+  &.right {
+    right: 16px;
+  }
+
+  &.left {
+    left: 16px;
+  }
+}
+
+.ur-notification__group {
+  margin-left: 13px;
+  margin-right: 8px;
+}
+
+.ur-notification__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #303133;
+  margin: 0;
+}
+
+.ur-notification__content {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 6px 0 0;
+  color: #606266;
+  text-align: justify;
+
+  p {
+    margin: 0;
+  }
+}
+
+.ur-notification__icon {
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+}
+
+.ur-notification__closeBtn {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  cursor: pointer;
+  color: #909399;
+  font-size: 16px;
+
+  &:hover {
+    color: #606266;
+  }
+}
+
+.ur-notification {
+  .ur-icon-success {
+    color: #67C23A;
+  }
+
+  .ur-icon-error {
+    color: #F56C6C;
+  }
+
+  .ur-icon-info {
+    color: #909399;
+  }
+
+  .ur-icon-warning {
+    color: #E6A23C;
+  }
+}
+
+.ur-notification-fade-enter-from {
+  &.right {
+    right: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+
+  &.left {
+    left: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.ur-notification-fade-leave-to {
+  opacity: 0;
+}

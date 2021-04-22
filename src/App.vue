@@ -116,6 +116,11 @@
       <ur-progress :percentage="10" type="circle"></ur-progress>
     </div>
     <div>
+      <p class="title">通知</p>
+      <ur-button plain @click="open1" style="margin: 0 1rem;">可自动关闭</ur-button>
+      <ur-button plain @click="open2">不会自动关闭</ur-button>
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <test-carousel></test-carousel>
     </div>
@@ -123,7 +128,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, h } from 'vue';
 import TestCarousel from './components/carousel.vue';
 
 export default defineComponent({
@@ -187,10 +192,26 @@ export default defineComponent({
       sliderValue: 0,
     };
   },
+  mounted() {
+  },
   methods: {
     handleClose(tag: any) {
       this.tags.splice(this.tags.indexOf(tag), 1);
     },
+    open1() {
+      this.$notify({
+        title: '标题名称',
+        message: h('i', {}, '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案')
+      });
+    },
+
+    open2() {
+      this.$notify({
+        title: '提示',
+        message: '这是一条不会自动关闭的消息',
+        duration: 0
+      });
+    }
   },
 });
 </script>
