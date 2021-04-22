@@ -21,6 +21,7 @@ import Tooltip from './tooltip'
 import Slider from './slider'
 import Progress from './progress'
 import Notify from './notification'
+import Dialog from './dialog'
 
 // 存储组件列表
 const components = [
@@ -43,6 +44,7 @@ const components = [
   Tooltip,
   Slider,
   Progress,
+  Dialog,
 ];
 
 const plugins = [
@@ -77,6 +79,7 @@ export const UrTooltip: SFCWithInstall<typeof Tooltip> = Tooltip
 export const UrSlider: SFCWithInstall<typeof Slider> = Slider
 export const UrProgress: SFCWithInstall<typeof Progress> = Progress
 export const UrNotify: SFCWithInstall<typeof Notify> = Notify
+export const UrDialog: SFCWithInstall<typeof Dialog> = Dialog
 
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
@@ -102,4 +105,5 @@ export default {
   UrSlider,
   UrProgress,
   UrNotify,
+  UrDialog,
 };

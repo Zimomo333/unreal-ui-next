@@ -121,6 +121,29 @@
       <ur-button plain @click="open2">不会自动关闭</ur-button>
     </div>
     <div>
+      <p class="title">对话框</p>
+      <ur-button @click="dialogVisible = true" style="margin: 0 1rem;">打开</ur-button>
+      <ur-button type="text" @click="outerVisible = true">点击打开外层 Dialog</ur-button>
+      <ur-dialog title="提示" v-model="dialogVisible" width="30%" :before-close="handleDialogClose">
+        <span>这是一段信息</span>
+        <template #footer>
+          <span class="dialog-footer">
+            <ur-button @click="dialogVisible = false">取 消</ur-button>
+            <ur-button type="primary" @click="dialogVisible = false">确 定</ur-button>
+          </span>
+        </template>
+      </ur-dialog>
+      <ur-dialog title="外层 Dialog" v-model="outerVisible">
+        <ur-dialog width="30%" title="内层 Dialog" v-model="innerVisible" append-to-body></ur-dialog>
+        <template #footer>
+          <div class="dialog-footer">
+            <ur-button @click="outerVisible = false">取 消</ur-button>
+            <ur-button type="primary" @click="innerVisible = true">打开内层 Dialog</ur-button>
+          </div>
+        </template>
+      </ur-dialog>
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <test-carousel></test-carousel>
     </div>
@@ -190,10 +213,12 @@ export default defineComponent({
       switchValue: true,
       inputNumber: 1,
       sliderValue: 0,
+      dialogVisible: false,
+      outerVisible: false,
+      innerVisible: false,
     };
   },
-  mounted() {
-  },
+  mounted() {},
   methods: {
     handleClose(tag: any) {
       this.tags.splice(this.tags.indexOf(tag), 1);
@@ -201,7 +226,7 @@ export default defineComponent({
     open1() {
       this.$notify({
         title: '标题名称',
-        message: h('i', {}, '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案')
+        message: h('i', {}, '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案'),
       });
     },
 
@@ -209,9 +234,17 @@ export default defineComponent({
       this.$notify({
         title: '提示',
         message: '这是一条不会自动关闭的消息',
-        duration: 0
+        duration: 0,
       });
-    }
+    },
+
+    handleDialogClose(done) {
+      // this.$confirm('确认关闭？')
+      //   .then(_ => {
+      //     done();
+      //   })
+      //   .catch(_ => {});
+    },
   },
 });
 </script>
