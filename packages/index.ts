@@ -22,6 +22,7 @@ import Slider from './slider'
 import Progress from './progress'
 import Notify from './notification'
 import Dialog from './dialog'
+import MessageBox from './message-box'
 
 // 存储组件列表
 const components = [
@@ -49,6 +50,7 @@ const components = [
 
 const plugins = [
   Notify,
+  MessageBox,
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
@@ -80,6 +82,7 @@ export const UrSlider: SFCWithInstall<typeof Slider> = Slider
 export const UrProgress: SFCWithInstall<typeof Progress> = Progress
 export const UrNotify: SFCWithInstall<typeof Notify> = Notify
 export const UrDialog: SFCWithInstall<typeof Dialog> = Dialog
+export const UrMessageBox: SFCWithInstall<typeof MessageBox> = MessageBox
 
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
@@ -106,4 +109,5 @@ export default {
   UrProgress,
   UrNotify,
   UrDialog,
+  UrMessageBox,
 };

@@ -2,12 +2,12 @@
   <div id="app">
     <div>
       <p class="title">按钮</p>
-      <ur-button class="button-demo" size="large">超大尺寸</ur-button>
-      <ur-button class="button-demo" size="medium">中等尺寸</ur-button>
-      <ur-button class="button-demo" size="small">小型尺寸</ur-button>
-      <ur-button class="button-demo" size="mini">超小尺寸</ur-button>
-      <ur-button class="button-demo" :loading="true">Loading...</ur-button>
-      <ur-button class="button-demo active">按下</ur-button>
+      <ur-button class="button" size="large">超大尺寸</ur-button>
+      <ur-button class="button" size="medium">中等尺寸</ur-button>
+      <ur-button class="button" size="small">小型尺寸</ur-button>
+      <ur-button class="button" size="mini">超小尺寸</ur-button>
+      <ur-button class="button" :loading="true">Loading...</ur-button>
+      <ur-button class="button active">按下</ur-button>
     </div>
     <div>
       <p class="title">输入框</p>
@@ -117,13 +117,19 @@
     </div>
     <div>
       <p class="title">通知</p>
-      <ur-button plain @click="open1" style="margin: 0 1rem;">可自动关闭</ur-button>
-      <ur-button plain @click="open2">不会自动关闭</ur-button>
+      <ur-button class="button" plain @click="open1">可自动关闭</ur-button>
+      <ur-button class="button" plain @click="open2">不会自动关闭</ur-button>
+    </div>
+    <div>
+      <p class="title">弹框</p>
+      <ur-button class="button" type="text" @click="openMessageBox">点击打开 Message Box</ur-button>
+      <ur-button class="button" type="text" @click="openMessageBoxConfirm">确认消息</ur-button>
+      <ur-button class="button" type="text" @click="openMessageBoxCommit">提交内容</ur-button>
     </div>
     <div>
       <p class="title">对话框</p>
-      <ur-button @click="dialogVisible = true" style="margin: 0 1rem;">打开</ur-button>
-      <ur-button type="text" @click="outerVisible = true">点击打开外层 Dialog</ur-button>
+      <ur-button class="button" @click="dialogVisible = true">打开</ur-button>
+      <ur-button class="button" type="text" @click="outerVisible = true">点击打开外层 Dialog</ur-button>
       <ur-dialog title="提示" v-model="dialogVisible" width="30%" :before-close="handleDialogClose">
         <span>这是一段信息</span>
         <template #footer>
@@ -238,12 +244,65 @@ export default defineComponent({
       });
     },
 
+    openMessageBox() {
+      this.$alert('这是一段内容', '标题名称', {
+        confirmButtonText: '确定',
+        callback: action => {
+          // this.$message({
+          //   type: 'info',
+          //   message: `action: ${ action }`
+          // });
+        },
+      });
+    },
+
+    openMessageBoxConfirm() {
+      this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning',
+      })
+        .then(() => {
+          // this.$message({
+          //   type: 'success',
+          //   message: '删除成功!',
+          // });
+        })
+        .catch(() => {
+          // this.$message({
+          //   type: 'info',
+          //   message: '已取消删除',
+          // });
+        });
+    },
+
+    openMessageBoxCommit() {
+      this.$prompt('请输入邮箱', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        inputPattern: /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,
+        inputErrorMessage: '邮箱格式不正确',
+      })
+        .then(({ value }) => {
+          // this.$message({
+          //   type: 'success',
+          //   message: '你的邮箱是: ' + value,
+          // });
+        })
+        .catch(() => {
+          // this.$message({
+          //   type: 'info',
+          //   message: '取消输入',
+          // });
+        });
+    },
+
     handleDialogClose(done) {
-      // this.$confirm('确认关闭？')
-      //   .then(_ => {
-      //     done();
-      //   })
-      //   .catch(_ => {});
+      this.$confirm('确认关闭？')
+        .then(_ => {
+          done();
+        })
+        .catch(_ => {});
     },
   },
 });
@@ -267,7 +326,7 @@ body {
   font-size: 1.5rem;
   margin: 0.8rem 0;
 }
-.button-demo {
+.button {
   margin: 0 1rem;
   &.active {
     border: 0;
