@@ -26,6 +26,9 @@ import MessageBox from './message-box'
 import Message from './message'
 import Tabs from './tabs'
 import TabPane from './tab-pane'
+import DatePicker from './date-picker'
+import TimePicker from './time-picker'
+import TimeSelect from './time-select'
 
 // 存储组件列表
 const components = [
@@ -51,6 +54,9 @@ const components = [
   Dialog,
   Tabs,
   TabPane,
+  DatePicker,
+  TimePicker,
+  TimeSelect,
 ];
 
 const plugins = [
@@ -92,6 +98,9 @@ export const UrMessageBox: SFCWithInstall<typeof MessageBox> = MessageBox
 export const UrMessage: SFCWithInstall<typeof Message> = Message
 export const UrTabs: SFCWithInstall<typeof Tabs> = Tabs
 export const UrTabPane: SFCWithInstall<typeof TabPane> = TabPane
+export const UrDatePicker: SFCWithInstall<typeof DatePicker> = DatePicker
+export const UrTimePicker: SFCWithInstall<typeof TimePicker> = TimePicker
+export const UrTimeSelect: SFCWithInstall<typeof TimeSelect> = TimeSelect
 
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
@@ -122,4 +131,7 @@ export default {
   UrMessage,
   UrTabs,
   UrTabPane,
+  UrDatePicker,
+  UrTimePicker,
+  UrTimeSelect,
 };

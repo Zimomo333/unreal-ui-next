@@ -159,6 +159,22 @@
       </ur-tabs>
     </div>
     <div>
+      <p class="title">时间选择器</p>
+      <time-picker/>
+    </div>
+    <div>
+      <p class="title">时间选择器</p>
+      <time-select/>
+    </div>
+    <div>
+      <p class="title">日期选择器</p>
+      <date-picker/>
+    </div>
+    <div>
+      <p class="title">日期时间选择器</p>
+      <date-time-picker/>
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <test-carousel></test-carousel>
     </div>
@@ -168,11 +184,19 @@
 <script lang="ts">
 import { defineComponent, h } from 'vue';
 import TestCarousel from './components/carousel.vue';
+import TimePicker from './components/time-picker.vue';
+import TimeSelect from './components/time-select.vue';
+import DatePicker from './components/date-picker.vue';
+import DateTimePicker from './components/date-time-picker.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
     TestCarousel,
+    TimePicker,
+    TimeSelect,
+    DatePicker,
+    DateTimePicker,
   },
   data() {
     return {
