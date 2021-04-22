@@ -14,11 +14,11 @@
       <ur-input class="input-demo" v-model="input" placeholder="请输入内容" clearable>
         <template #prepend>Http://</template>
       </ur-input>
-      <br>
+      <br />
       <ur-input class="input-demo" placeholder="请输入内容" clearable>
         <template #append>.com</template>
       </ur-input>
-      <br>
+      <br />
       <ur-input class="input-demo" v-model="input" placeholder="请输入内容" show-password>
         <template #prepend>密码</template>
         <template #append>
@@ -34,9 +34,8 @@
         :key="tag.name"
         closable
         @close="handleClose"
-        :type="tag.type">
-        {{tag.name}}
-      </ur-tag>
+        :type="tag.type"
+      >{{tag.name}}</ur-tag>
     </div>
 
     <div style="padding-bottom: 20rem;">
@@ -46,15 +45,17 @@
           v-for="item in options"
           :key="item.value"
           :label="item.label"
-          :value="item.value">
-        </ur-option>
+          :value="item.value"
+        ></ur-option>
       </ur-select>
     </div>
     <div>
       <p class="title">面包屑</p>
       <ur-breadcrumb separator="/">
         <ur-breadcrumb-item :to="{ path: '/' }">首页</ur-breadcrumb-item>
-        <ur-breadcrumb-item><a href="/">活动管理</a></ur-breadcrumb-item>
+        <ur-breadcrumb-item>
+          <a href="/">活动管理</a>
+        </ur-breadcrumb-item>
         <ur-breadcrumb-item>活动列表</ur-breadcrumb-item>
       </ur-breadcrumb>
     </div>
@@ -76,19 +77,11 @@
     </div>
     <div>
       <p class="title">分页</p>
-      <ur-pagination
-        background
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="50">
-      </ur-pagination>
+      <ur-pagination background layout="total, sizes, prev, pager, next, jumper" :total="50"></ur-pagination>
     </div>
     <div>
       <p class="title">开关</p>
-      <ur-switch
-        v-model="switchValue"
-        active-text="按月付费"
-        inactive-text="按年付费"
-      />
+      <ur-switch v-model="switchValue" active-text="按月付费" inactive-text="按年付费" />
     </div>
     <div>
       <p class="title">计数器</p>
@@ -107,6 +100,17 @@
       </ur-tooltip>
     </div>
     <div>
+      <p class="title">滑块</p>
+      <span>默认</span>
+      <ur-slider v-model="sliderValue"></ur-slider>
+      <span>带输入框</span>
+      <ur-slider v-model="sliderValue" show-input></ur-slider>
+      <span>禁用</span>
+      <ur-slider v-model="sliderValue" disabled></ur-slider>
+      <span>竖向</span>
+      <ur-slider v-model="sliderValue" vertical style="height: 150px;"></ur-slider>
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <test-carousel></test-carousel>
     </div>
@@ -114,7 +118,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
 import TestCarousel from './components/carousel.vue';
 
 export default defineComponent({
@@ -130,56 +134,67 @@ export default defineComponent({
         { name: '标签二', type: 'success' },
         { name: '标签三', type: 'info' },
         { name: '标签四', type: 'warning' },
-        { name: '标签五', type: 'danger' }
+        { name: '标签五', type: 'danger' },
       ],
-      options: [{
-        value: '选项1',
-        label: '选项1'
-      }, {
-        value: '选项2',
-        label: '选项2'
-      }, {
-        value: '选项3',
-        label: '选项3'
-      }, {
-        value: '选项4',
-        label: '选项4'
-      }, {
-        value: '选项5',
-        label: '选项5'
-      }, {
-        value: '选项6',
-        label: '选项6'
-      }, {
-        value: '选项7',
-        label: '选项7'
-      }, {
-        value: '选项8',
-        label: '选项8'
-      }, {
-        value: '选项9',
-        label: '选项9'
-      }],
+      options: [
+        {
+          value: '选项1',
+          label: '选项1',
+        },
+        {
+          value: '选项2',
+          label: '选项2',
+        },
+        {
+          value: '选项3',
+          label: '选项3',
+        },
+        {
+          value: '选项4',
+          label: '选项4',
+        },
+        {
+          value: '选项5',
+          label: '选项5',
+        },
+        {
+          value: '选项6',
+          label: '选项6',
+        },
+        {
+          value: '选项7',
+          label: '选项7',
+        },
+        {
+          value: '选项8',
+          label: '选项8',
+        },
+        {
+          value: '选项9',
+          label: '选项9',
+        },
+      ],
       value: '',
       radio: 3,
-      checkList: ['选中且禁用','复选框 A'],
+      checkList: ['选中且禁用', '复选框 A'],
       switchValue: true,
       inputNumber: 1,
-    }
+      sliderValue: 0,
+    };
   },
   methods: {
     handleClose(tag: any) {
       this.tags.splice(this.tags.indexOf(tag), 1);
-    }
-  }
-})
+    },
+  },
+});
 </script>
 
 <style lang="scss">
 body {
-    background: #e6e7ee;
-    display: flex;
-    justify-content: center;
+  background: #e6e7ee;
+  display: flex;
+  justify-content: center;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -191,13 +206,13 @@ body {
 
 .title {
   font-size: 1.5rem;
-  margin: .8rem 0;
+  margin: 0.8rem 0;
 }
 .button-demo {
   margin: 0 1rem;
   &.active {
     border: 0;
-    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
   }
 }
 .input-demo {
