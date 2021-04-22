@@ -24,6 +24,8 @@ import Notify from './notification'
 import Dialog from './dialog'
 import MessageBox from './message-box'
 import Message from './message'
+import Tabs from './tabs'
+import TabPane from './tab-pane'
 
 // 存储组件列表
 const components = [
@@ -47,6 +49,8 @@ const components = [
   Slider,
   Progress,
   Dialog,
+  Tabs,
+  TabPane,
 ];
 
 const plugins = [
@@ -86,6 +90,8 @@ export const UrNotify: SFCWithInstall<typeof Notify> = Notify
 export const UrDialog: SFCWithInstall<typeof Dialog> = Dialog
 export const UrMessageBox: SFCWithInstall<typeof MessageBox> = MessageBox
 export const UrMessage: SFCWithInstall<typeof Message> = Message
+export const UrTabs: SFCWithInstall<typeof Tabs> = Tabs
+export const UrTabPane: SFCWithInstall<typeof TabPane> = TabPane
 
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
@@ -114,4 +120,6 @@ export default {
   UrDialog,
   UrMessageBox,
   UrMessage,
+  UrTabs,
+  UrTabPane,
 };

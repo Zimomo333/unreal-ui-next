@@ -150,6 +150,15 @@
       </ur-dialog>
     </div>
     <div>
+      <p class="title">标签页</p>
+      <ur-tabs v-model="tabActiveName">
+        <ur-tab-pane label="用户管理" name="first">用户管理</ur-tab-pane>
+        <ur-tab-pane label="配置管理" name="second">配置管理</ur-tab-pane>
+        <ur-tab-pane label="角色管理" name="third">角色管理</ur-tab-pane>
+        <ur-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</ur-tab-pane>
+      </ur-tabs>
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <test-carousel></test-carousel>
     </div>
@@ -222,6 +231,7 @@ export default defineComponent({
       dialogVisible: false,
       outerVisible: false,
       innerVisible: false,
+      tabActiveName: 'second',
     };
   },
   mounted() {},
