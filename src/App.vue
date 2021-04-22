@@ -175,6 +175,10 @@
       <date-time-picker/>
     </div>
     <div>
+      <p class="title">表格</p>
+      <table-demo/>
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <test-carousel></test-carousel>
     </div>
@@ -187,7 +191,8 @@ import TestCarousel from './components/carousel.vue';
 import TimePicker from './components/time-picker.vue';
 import TimeSelect from './components/time-select.vue';
 import DatePicker from './components/date-picker.vue';
-import DateTimePicker from './components/date-time-picker.vue'
+import DateTimePicker from './components/date-time-picker.vue';
+import TableDemo from './components/table.vue';
 
 export default defineComponent({
   name: 'App',
@@ -197,6 +202,7 @@ export default defineComponent({
     TimeSelect,
     DatePicker,
     DateTimePicker,
+    TableDemo,
   },
   data() {
     return {
