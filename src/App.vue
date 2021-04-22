@@ -111,6 +111,11 @@
       <ur-slider v-model="sliderValue" vertical style="height: 150px;"></ur-slider>
     </div>
     <div>
+      <p class="title">进度条</p>
+      <ur-progress :percentage="50"></ur-progress>
+      <ur-progress :percentage="10" type="circle"></ur-progress>
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <test-carousel></test-carousel>
     </div>
