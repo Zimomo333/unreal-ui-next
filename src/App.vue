@@ -248,10 +248,10 @@ export default defineComponent({
       this.$alert('这是一段内容', '标题名称', {
         confirmButtonText: '确定',
         callback: action => {
-          // this.$message({
-          //   type: 'info',
-          //   message: `action: ${ action }`
-          // });
+          this.$message({
+            type: 'info',
+            message: `action: ${ action }`
+          });
         },
       });
     },
@@ -263,16 +263,16 @@ export default defineComponent({
         type: 'warning',
       })
         .then(() => {
-          // this.$message({
-          //   type: 'success',
-          //   message: '删除成功!',
-          // });
+          this.$message({
+            type: 'success',
+            message: '删除成功!',
+          });
         })
         .catch(() => {
-          // this.$message({
-          //   type: 'info',
-          //   message: '已取消删除',
-          // });
+          this.$message({
+            type: 'info',
+            message: '已取消删除',
+          });
         });
     },
 
@@ -284,16 +284,16 @@ export default defineComponent({
         inputErrorMessage: '邮箱格式不正确',
       })
         .then(({ value }) => {
-          // this.$message({
-          //   type: 'success',
-          //   message: '你的邮箱是: ' + value,
-          // });
+          this.$message({
+            type: 'success',
+            message: '你的邮箱是: ' + value,
+          });
         })
         .catch(() => {
-          // this.$message({
-          //   type: 'info',
-          //   message: '取消输入',
-          // });
+          this.$message({
+            type: 'info',
+            message: '取消输入',
+          });
         });
     },
 
