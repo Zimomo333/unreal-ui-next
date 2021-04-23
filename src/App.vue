@@ -37,10 +37,9 @@
         :type="tag.type"
       >{{tag.name}}</ur-tag>
     </div>
-
     <div style="padding-bottom: 20rem;">
       <p class="title">下拉框多选</p>
-      <ur-select v-model="value" multiple placeholder="请选择">
+      <ur-select class="space" v-model="value" multiple placeholder="请选择">
         <ur-option
           v-for="item in options"
           :key="item.value"
@@ -48,6 +47,7 @@
           :value="item.value"
         ></ur-option>
       </ur-select>
+      <select-demo class="space"/>
     </div>
     <div>
       <p class="title">面包屑</p>
@@ -187,6 +187,7 @@
 
 <script lang="ts">
 import { defineComponent, h } from 'vue';
+import SelectDemo from './components/select.vue';
 import TestCarousel from './components/carousel.vue';
 import TimePicker from './components/time-picker.vue';
 import TimeSelect from './components/time-select.vue';
@@ -197,6 +198,7 @@ import TableDemo from './components/table.vue';
 export default defineComponent({
   name: 'App',
   components: {
+    SelectDemo,
     TestCarousel,
     TimePicker,
     TimeSelect,

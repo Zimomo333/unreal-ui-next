@@ -213,6 +213,9 @@
   transform: translate(0, 0.5px);
 }
 .ur-select__caret {
+  &.ur-icon-circle-close {
+    margin-right: .3rem;
+  }
   svg {
     transition: transform .3s;
   }

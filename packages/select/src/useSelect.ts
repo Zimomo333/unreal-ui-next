@@ -87,7 +87,6 @@ export const useSelect = (props, states: States, ctx) => {
     const criteria =
       props.clearable &&
       !selectDisabled.value &&
-      states.inputHovering &&
       hasValue
     return criteria
   })
