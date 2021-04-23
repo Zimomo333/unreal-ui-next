@@ -7,6 +7,7 @@
           :class="{ 'has-seconds': showSeconds, 'is-arrow': arrowControl }"
           class="ur-time-range-picker__body ur-time-panel__content"
         >
+          <div class="ur-time-spinner__item__active__bar"></div>
           <time-spinner
             ref="minSpinner"
             role="start"
@@ -29,6 +30,7 @@
           :class="{ 'has-seconds': showSeconds, 'is-arrow': arrowControl }"
           class="ur-time-range-picker__body ur-time-panel__content"
         >
+          <div class="ur-time-spinner__item__active__bar"></div>
           <time-spinner
             ref="maxSpinner"
             role="end"
@@ -47,21 +49,21 @@
       </div>
     </div>
     <div class="ur-time-panel__footer">
-      <button
+      <ur-button
         type="button"
         class="ur-time-panel__btn cancel"
         @click="handleCancel()"
       >
         {{ t('el.datepicker.cancel') }}
-      </button>
-      <button
+      </ur-button>
+      <ur-button
         type="button"
         class="ur-time-panel__btn confirm"
         :disabled="btnConfirmDisabled"
         @click="handleConfirm()"
       >
         {{ t('el.datepicker.confirm') }}
-      </button>
+      </ur-button>
     </div>
   </div>
 </template>

@@ -117,19 +117,19 @@
     </div>
     <div>
       <p class="title">通知</p>
-      <ur-button class="button" plain @click="open1">可自动关闭</ur-button>
-      <ur-button class="button" plain @click="open2">不会自动关闭</ur-button>
+      <ur-button class="space" plain @click="open1">可自动关闭</ur-button>
+      <ur-button class="space" plain @click="open2">不会自动关闭</ur-button>
     </div>
     <div>
       <p class="title">弹框</p>
-      <ur-button class="button" type="text" @click="openMessageBox">点击打开 Message Box</ur-button>
-      <ur-button class="button" type="text" @click="openMessageBoxConfirm">确认消息</ur-button>
-      <ur-button class="button" type="text" @click="openMessageBoxCommit">提交内容</ur-button>
+      <ur-button class="space" type="text" @click="openMessageBox">点击打开 Message Box</ur-button>
+      <ur-button class="space" type="text" @click="openMessageBoxConfirm">确认消息</ur-button>
+      <ur-button class="space" type="text" @click="openMessageBoxCommit">提交内容</ur-button>
     </div>
     <div>
       <p class="title">对话框</p>
-      <ur-button class="button" @click="dialogVisible = true">打开</ur-button>
-      <ur-button class="button" type="text" @click="outerVisible = true">点击打开外层 Dialog</ur-button>
+      <ur-button class="space" @click="dialogVisible = true">打开</ur-button>
+      <ur-button class="space" type="text" @click="outerVisible = true">点击打开外层 Dialog</ur-button>
       <ur-dialog title="提示" v-model="dialogVisible" width="30%" :before-close="handleDialogClose">
         <span>这是一段信息</span>
         <template #footer>
@@ -379,5 +379,9 @@ body {
 }
 .tag-demo {
   margin: 0 0.4rem;
+}
+
+.space {
+  margin: 0 1rem;
 }
 </style>

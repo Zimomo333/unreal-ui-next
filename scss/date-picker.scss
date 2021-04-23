@@ -355,8 +355,9 @@
     }
 
     .ur-time-spinner__item:hover:not(.disabled):not(.active) {
-      background: #fff;
-      cursor: default;
+      background: transparent;
+      border-radius: 0.55rem;
+      box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
     }
   }
 }
@@ -417,7 +418,9 @@
   color: #606266;
 
   &:hover:not(.disabled):not(.active) {
-    background: #f5f7fa;
+    background: transparent;
+    border-radius: 0.55rem;
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
     cursor: pointer;
   }
 
@@ -576,10 +579,11 @@
 }
 
 .ur-picker__popper.ur-popper[role='tooltip'] {
-  background: #fff;
-  border: 1px solid #e4e7ed;
-  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  background-color: #e6e7ee;
+  border: 0.0625rem solid #D1D9E6;
+  border-radius: 0.55rem;
+  box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
+  -webkit-box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
 
   .ur-popper__arrow::before {
     border: 1px solid #e4e7ed;
@@ -670,7 +674,7 @@
     border: none;
     outline: 0;
     display: inline-block;
-    height: 100%;
+    height:  90%;
     margin: 0;
     padding: 0;
     width: 39%;
@@ -699,14 +703,6 @@
     color: #303133;
   }
 
-  .ur-range__close-icon {
-    font-size: 14px;
-    color: #c0c4cc;
-    width: 25px;
-    display: inline-block;
-    float: right;
-    line-height: 32px;
-  }
 }
 
 .ur-range-editor {
@@ -722,14 +718,6 @@
 
   .ur-range-input {
     line-height: 1;
-  }
-
-  &.is-active {
-    border-color: #409eff;
-
-    &:hover {
-      border-color: #409eff;
-    }
   }
 }
 
@@ -832,7 +820,7 @@
 .ur-picker-panel {
   position: relative;
   color: #606266;
-  background: #fff;
+  background: transparent;
   border-radius: 4px;
   line-height: 30px;
 
@@ -1160,7 +1148,7 @@
 .ur-time-range-picker__content {
   position: relative;
   text-align: center;
-  padding: 10px;
+  padding: 10px 10px 0;
   z-index: 1;
 }
 
@@ -1177,11 +1165,6 @@
   margin-bottom: 5px;
   text-align: center;
   font-size: 14px;
-}
-
-.ur-time-range-picker__body {
-  border-radius: 2px;
-  border: 1px solid #e4e7ed;
 }
 
 .ur-time-panel {
@@ -1252,7 +1235,7 @@
 .ur-time-panel__footer {
   border-top: 1px solid #e4e4e4;
   padding: 4px;
-  height: 36px;
+  height: 42px;
   line-height: 25px;
   text-align: right;
   -webkit-box-sizing: border-box;
@@ -1272,7 +1255,6 @@
 
   &.confirm {
     font-weight: 800;
-    color: #409eff;
   }
 }
 
