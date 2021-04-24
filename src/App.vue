@@ -185,7 +185,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, h } from 'vue';
 import SelectDemo from './components/select.vue';
 import TestCarousel from './components/carousel.vue';
@@ -268,7 +268,7 @@ export default defineComponent({
   },
   mounted() {},
   methods: {
-    handleClose(tag: any) {
+    handleClose(tag) {
       this.tags.splice(this.tags.indexOf(tag), 1);
     },
     open1() {

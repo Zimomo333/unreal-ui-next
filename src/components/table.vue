@@ -22,7 +22,6 @@
     :data="tableData"
     tooltip-effect="dark"
     style="width: 100%"
-    @selection-change="handleSelectionChange"
   >
     <ur-table-column type="selection" width="55"></ur-table-column>
     <ur-table-column label="日期" width="120">

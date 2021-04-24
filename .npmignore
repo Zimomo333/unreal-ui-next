@@ -5,6 +5,9 @@ scss
 packages
 utils/
 assets
+directives
+hooks
+locale
 vite.config.ts
 tsconfig.json
 *.map
