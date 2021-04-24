@@ -1,11 +1,9 @@
 <template>
-  <div class="block">
     <span class="demonstration">默认</span>
-    <ur-date-picker v-model="value1" type="date" placeholder="选择日期"></ur-date-picker>
-  </div>
-  <div class="block">
+    <ur-date-picker class="space" v-model="value1" type="date" placeholder="选择日期"></ur-date-picker>
     <span class="demonstration">带快捷选项</span>
     <ur-date-picker
+      class="space"
       v-model="value2"
       align="right"
       type="date"
@@ -13,7 +11,6 @@
       :disabled-date="disabledDate"
       :shortcuts="shortcuts"
     ></ur-date-picker>
-  </div>
 </template>
 
 <script>

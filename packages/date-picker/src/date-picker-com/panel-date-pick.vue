@@ -56,21 +56,23 @@
           class="ur-date-picker__header"
           :class="{ 'ur-date-picker__header--bordered': currentView === 'year' || currentView === 'month' }"
         >
-          <button
+          <ur-button
             type="button"
             :aria-label="t(`el.datepicker.prevYear`)"
             class="ur-picker-panel__icon-btn ur-date-picker__prev-btn ur-icon-d-arrow-left"
             @click="prevYear_"
           >
-          </button>
-          <button
+            <svg t="1619257429231" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4273" width="20" height="20"><path d="M296.9 512l280.5-280.5c11.7-11.7 11.7-30.7 0-42.4s-30.7-11.7-42.4 0L233.3 490.8c-11.7 11.7-11.7 30.7 0 42.4L535 835c5.9 5.9 13.5 8.8 21.2 8.8 7.7 0 15.4-2.9 21.2-8.8 11.7-11.7 11.7-30.7 0-42.4L296.9 512z m493.9 280.5L510.2 512l280.5-280.5c11.7-11.7 11.7-30.7 0-42.4s-30.7-11.7-42.4 0L446.6 490.8c-11.7 11.7-11.7 30.7 0 42.4L748.3 835c5.9 5.9 13.5 8.8 21.2 8.8 7.7 0 15.4-2.9 21.2-8.8 11.8-11.8 11.8-30.7 0.1-42.5z" p-id="4274" fill="#707070"></path></svg>
+          </ur-button>
+          <ur-button
             v-show="currentView === 'date'"
             type="button"
             :aria-label="t(`el.datepicker.prevMonth`)"
             class="ur-picker-panel__icon-btn ur-date-picker__prev-btn ur-icon-arrow-left"
             @click="prevMonth_"
           >
-          </button>
+            <svg t="1619257642941" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1975" width="20" height="20"><path d="M643.1 843.8c-7.7 0-15.4-2.9-21.2-8.8L320.1 533.2c-11.7-11.7-11.7-30.7 0-42.4L621.9 189c11.7-11.7 30.7-11.7 42.4 0s11.7 30.7 0 42.4L383.8 512l280.5 280.5c11.7 11.7 11.7 30.7 0 42.4-5.9 5.9-13.5 8.9-21.2 8.9z" p-id="1976" fill="#707070"></path></svg>
+          </ur-button>
           <span
             role="button"
             class="ur-date-picker__header-label"
@@ -83,21 +85,23 @@
             :class="{ active: currentView === 'month' }"
             @click="showMonthPicker"
           >{{ t(`el.datepicker.month${ month + 1 }`) }}</span>
-          <button
+          <ur-button
             type="button"
             :aria-label="t(`el.datepicker.nextYear`)"
             class="ur-picker-panel__icon-btn ur-date-picker__next-btn ur-icon-d-arrow-right"
             @click="nextYear_"
           >
-          </button>
-          <button
+            <svg t="1619257458675" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4666" width="20" height="20"><path d="M790.8 490.8L489 189c-11.7-11.7-30.7-11.7-42.4 0s-11.7 30.7 0 42.4L727.1 512 446.6 792.5c-11.7 11.7-11.7 30.7 0 42.4 5.9 5.9 13.5 8.8 21.2 8.8s15.4-2.9 21.2-8.8l301.7-301.8c11.8-11.6 11.8-30.6 0.1-42.3z m-213.4 0L275.7 189c-11.7-11.7-30.7-11.7-42.4 0s-11.7 30.7 0 42.4L513.8 512 233.3 792.5c-11.7 11.7-11.7 30.7 0 42.4 5.9 5.9 13.5 8.8 21.2 8.8s15.4-2.9 21.2-8.8l301.7-301.8c11.8-11.6 11.8-30.6 0-42.3z" p-id="4667" fill="#707070"></path></svg>
+          </ur-button>
+          <ur-button
             v-show="currentView === 'date'"
             type="button"
             :aria-label="t(`el.datepicker.nextMonth`)"
             class="ur-picker-panel__icon-btn ur-date-picker__next-btn ur-icon-arrow-right"
             @click="nextMonth_"
           >
-          </button>
+            <svg t="1619257661610" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2242" width="20" height="20"><path d="M380.9 843.8c-7.7 0-15.4-2.9-21.2-8.8-11.7-11.7-11.7-30.7 0-42.4L640.2 512 359.7 231.5c-11.7-11.7-11.7-30.7 0-42.4s30.7-11.7 42.4 0l301.7 301.8c11.7 11.7 11.7 30.7 0 42.4L402.1 835c-5.8 5.8-13.5 8.8-21.2 8.8z" p-id="2243" fill="#707070"></path></svg>
+          </ur-button>
         </div>
         <div class="ur-picker-panel__content">
           <date-table

@@ -352,8 +352,8 @@
 
   .ur-time-panel {
     margin: 5px 0;
-    border: 1px solid #E4E7ED;
-    background-color: #FFF;
+    border-radius: 0.55rem;
+    background-color: #e6e7ee;
     -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   }
@@ -371,12 +371,16 @@
 }
 
 .ur-picker-panel__footer {
-  border-top: 1px solid #e4e4e4;
-  padding: 4px;
+  border-top: 0;
+  padding: 0 .5rem .6rem;
   text-align: right;
-  background-color: #FFF;
+  background-color: transparent;
   position: relative;
   font-size: 0;
+  
+  .ur-button {
+    margin: 0 .4rem;
+  }
 }
 
 .ur-picker-panel__shortcut {
@@ -393,7 +397,8 @@
   cursor: pointer;
 
   &:hover {
-    color: #409EFF;
+    border-radius: 0.55rem;
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
   }
 
   &.active {
@@ -450,11 +455,11 @@
   top: 0;
   bottom: 0;
   width: 110px;
-  border-right: 1px solid #e4e4e4;
+  border-right: 0.2rem solid #D1D9E6;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-top: 6px;
-  background-color: #FFF;
+  background-color: transparent;
   overflow: auto;
 }
 
@@ -505,7 +510,7 @@
 }
 
 .ur-date-picker__header {
-  margin: 12px;
+  padding: 12px 1rem;
   text-align: center;
 }
 
@@ -529,7 +534,8 @@
   color: #606266;
 
   &.active, &:hover {
-    color: #409EFF;
+    color: green;
+    font-weight: 700;
   }
 }
 

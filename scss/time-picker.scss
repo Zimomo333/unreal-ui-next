@@ -266,14 +266,6 @@
     width: 5%;
     color: #303133;
   }
-
-  .ur-range__close-icon {
-    display: none;
-
-    &.ur-icon-circle-close {
-      display: block;
-    }
-  }
 }
 
 .ur-range-editor {
@@ -417,10 +409,9 @@
 }
 
 .ur-picker-panel__footer {
-  border-top: 1px solid #e4e4e4;
   padding: 4px;
   text-align: right;
-  background-color: #fff;
+  background-color: transparent;
   position: relative;
   font-size: 0;
 }
@@ -439,7 +430,8 @@
   cursor: pointer;
 
   &:hover {
-    color: #409eff;
+    border-radius: 0.55rem;
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
   }
 
   &.active {
@@ -497,11 +489,11 @@
   top: 0;
   bottom: 0;
   width: 110px;
-  border-right: 1px solid #e4e4e4;
+  border-right: 0.2rem solid #D1D9E6;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-top: 6px;
-  background-color: #fff;
+  background-color: transparent;
   overflow: auto;
 }
 
@@ -689,7 +681,6 @@
 }
 
 .ur-time-panel__footer {
-  border-top: 1px solid #e4e4e4;
   padding: 4px;
   height: 42px;
   line-height: 25px;

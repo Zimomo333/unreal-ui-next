@@ -92,7 +92,8 @@
       position: relative;
 
       span {
-        color: #409eff;
+        color: green;
+        font-size: 0.9rem;
         font-weight: 700;
       }
 
@@ -103,12 +104,14 @@
     }
 
     &.available:hover {
-      color: #409eff;
+      border-radius: 0.55rem;
+      box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
     }
 
-    &.current:not(.disabled) span {
-      color: #fff;
-      background-color: #409eff;
+    &.current:not(.disabled) {
+      border-radius: 0.55rem;
+      box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
+      font-weight: 700;
     }
 
     &.end-date div,
@@ -139,7 +142,6 @@
     }
 
     &.disabled div {
-      background-color: #f5f7fa;
       opacity: 1;
       cursor: not-allowed;
       color: #c0c4cc;
@@ -189,7 +191,6 @@
     padding: 5px;
     color: #606266;
     font-weight: 400;
-    border-bottom: solid 1px #ebeef5;
   }
 }
 
@@ -212,7 +213,8 @@
 
     &.today {
       .cell {
-        color: #409eff;
+        color: green;
+        font-size: .9rem;
         font-weight: 700;
       }
 
@@ -242,7 +244,8 @@
       border-radius: 18px;
 
       &:hover {
-        color: #409eff;
+        border-radius: 0.55rem;
+        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
       }
     }
 
@@ -294,7 +297,8 @@
     cursor: pointer;
 
     &.today .cell {
-      color: #409eff;
+      color: green;
+      font-size: .9rem;
       font-weight: 700;
     }
 
@@ -317,7 +321,9 @@
       margin: 0 auto;
 
       &:hover {
-        color: #409eff;
+        // color: #409eff;
+        border-radius: 0.55rem;
+        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
       }
     }
 
@@ -655,10 +661,6 @@
 }
 
 .ur-date-editor {
-  .ur-icon-circle-close {
-    cursor: pointer;
-  }
-
   .ur-range__icon {
     font-size: 14px;
     margin-left: -5px;
@@ -846,10 +848,9 @@
 }
 
 .ur-picker-panel__footer {
-  border-top: 1px solid #e4e4e4;
   padding: 4px;
   text-align: right;
-  background-color: #fff;
+  background-color: transparent;
   position: relative;
   font-size: 0;
 }
@@ -868,7 +869,8 @@
   cursor: pointer;
 
   &:hover {
-    color: #409eff;
+    border-radius: 0.55rem;
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
   }
 
   &.active {
@@ -926,11 +928,11 @@
   top: 0;
   bottom: 0;
   width: 110px;
-  border-right: 1px solid #e4e4e4;
+  border-right: 0.2rem solid #D1D9E6;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-top: 6px;
-  background-color: #fff;
+  background-color: transparent;
   overflow: auto;
 }
 
@@ -982,14 +984,19 @@
 }
 
 .ur-date-picker__header {
-  margin: 12px;
+  padding: 12px 1rem;
   text-align: center;
+
+  .ur-button {
+    border-radius: .4rem;
+    margin: .2rem .4rem;
+    padding: .1rem .1rem 0;
+  }
 }
 
 .ur-date-picker__header--bordered {
   margin-bottom: 0;
   padding-bottom: 12px;
-  border-bottom: solid 1px #ebeef5;
 
   + .ur-picker-panel__content {
     margin-top: 0;
@@ -1007,7 +1014,8 @@
 
   &.active,
   &:hover {
-    color: #409eff;
+    color: green;
+    font-weight: 700;
   }
 }
 
@@ -1182,6 +1190,7 @@
   font-size: 0;
   position: relative;
   overflow: hidden;
+  margin: 0 0 .3rem;
 
   &::after,
   &::before {
@@ -1233,7 +1242,6 @@
 }
 
 .ur-time-panel__footer {
-  border-top: 1px solid #e4e4e4;
   padding: 4px;
   height: 42px;
   line-height: 25px;

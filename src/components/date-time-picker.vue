@@ -1,27 +1,23 @@
 <template>
-  <div class="block">
-    <span class="demonstration">默认</span>
-    <ur-date-picker v-model="value1" type="datetime" placeholder="选择日期时间"></ur-date-picker>
-  </div>
-  <div class="block">
-    <span class="demonstration">带快捷选项</span>
-    <ur-date-picker
-      v-model="value2"
-      type="datetime"
-      placeholder="选择日期时间"
-      align="right"
-      :shortcuts="shortcuts"
-    ></ur-date-picker>
-  </div>
-  <div class="block">
-    <span class="demonstration">设置默认时间</span>
-    <ur-date-picker
-      v-model="value3"
-      type="datetime"
-      placeholder="选择日期时间"
-      :default-time="defaultTime"
-    ></ur-date-picker>
-  </div>
+  <span class="demonstration">默认</span>
+  <ur-date-picker class="space" v-model="value1" type="datetime" placeholder="选择日期时间"></ur-date-picker>
+  <span class="demonstration">带快捷选项</span>
+  <ur-date-picker
+    class="space"
+    v-model="value2"
+    type="datetime"
+    placeholder="选择日期时间"
+    align="right"
+    :shortcuts="shortcuts"
+  ></ur-date-picker>
+  <span class="demonstration">设置默认时间</span>
+  <ur-date-picker
+    class="space"
+    v-model="value3"
+    type="datetime"
+    placeholder="选择日期时间"
+    :default-time="defaultTime"
+  ></ur-date-picker>
 </template>
 
 <script>

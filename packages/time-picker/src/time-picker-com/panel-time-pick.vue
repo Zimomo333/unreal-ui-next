@@ -2,6 +2,7 @@
   <transition :name="transitionName">
     <div v-if="actualVisible || visible" class="ur-time-panel">
       <div class="ur-time-panel__content" :class="{ 'has-seconds': showSeconds }">
+        <div class="ur-time-spinner__item__active__bar"></div>
         <time-spinner
           ref="spinner"
           :role="datetimeRole || 'start'"
@@ -18,20 +19,20 @@
         />
       </div>
       <div class="ur-time-panel__footer">
-        <button
+        <ur-button
           type="button"
           class="ur-time-panel__btn cancel"
           @click="handleCancel"
         >
           {{ t('el.datepicker.cancel') }}
-        </button>
-        <button
+        </ur-button>
+        <ur-button
           type="button"
           class="ur-time-panel__btn confirm"
           @click="handleConfirm()"
         >
           {{ t('el.datepicker.confirm') }}
-        </button>
+        </ur-button>
       </div>
     </div>
   </transition>
