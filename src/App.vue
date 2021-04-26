@@ -20,25 +20,11 @@
     </div>
     <div style="padding-bottom: 20rem;">
       <p class="title">下拉框多选</p>
-      <ur-select class="space" v-model="value" multiple placeholder="请选择">
-        <ur-option
-          v-for="item in options"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value"
-        ></ur-option>
-      </ur-select>
-      <select-demo class="space"/>
+      <select-demo/>
     </div>
     <div>
       <p class="title">面包屑</p>
-      <ur-breadcrumb separator="/">
-        <ur-breadcrumb-item :to="{ path: '/' }">首页</ur-breadcrumb-item>
-        <ur-breadcrumb-item>
-          <a href="/">活动管理</a>
-        </ur-breadcrumb-item>
-        <ur-breadcrumb-item>活动列表</ur-breadcrumb-item>
-      </ur-breadcrumb>
+      <breadcrumb-demo/>
     </div>
     <div>
       <p class="title">分页</p>
@@ -158,6 +144,7 @@ import CheckboxDemo from './components/checkbox.vue';
 import InputDemo from './components/input.vue';
 import TagDemo from './components/tag.vue';
 import SelectDemo from './components/select.vue';
+import BreadcrumbDemo from './components/breadcrumb.vue';
 import TestCarousel from './components/carousel.vue';
 import TimePicker from './components/time-picker.vue';
 import TimeSelect from './components/time-select.vue';
@@ -173,6 +160,7 @@ export default defineComponent({
     CheckboxDemo,
     InputDemo,
     TagDemo,
+    BreadcrumbDemo,
     SelectDemo,
     TestCarousel,
     TimePicker,
