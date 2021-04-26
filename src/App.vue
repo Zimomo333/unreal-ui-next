@@ -15,123 +15,80 @@
       <input-demo/>
     </div>
     <div>
-      <p class="title">标签</p>
-      <tag-demo/>
+      <p class="title">计数器</p>
+      <input-number-demo/>
     </div>
     <div style="padding-bottom: 20rem;">
-      <p class="title">下拉框多选</p>
+      <p class="title">选择器</p>
       <select-demo/>
     </div>
     <div>
-      <p class="title">面包屑</p>
-      <breadcrumb-demo/>
-    </div>
-    <div>
-      <p class="title">分页</p>
-      <ur-pagination background layout="total, sizes, prev, pager, next, jumper" :total="50"></ur-pagination>
-    </div>
-    <div>
       <p class="title">开关</p>
-      <ur-switch v-model="switchValue" active-text="按月付费" inactive-text="按年付费" />
-    </div>
-    <div>
-      <p class="title">计数器</p>
-      <ur-input-number
-        controls-position="right"
-        v-model="inputNumber"
-        :min="1"
-        :max="10"
-        label="描述文字"
-      />
-    </div>
-    <div>
-      <p class="title">气泡</p>
-      <ur-tooltip class="item" content="Top Left 提示文字" placement="right">
-        <ur-button>上左</ur-button>
-      </ur-tooltip>
+      <switch-demo/>
     </div>
     <div>
       <p class="title">滑块</p>
-      <span>默认</span>
-      <ur-slider v-model="sliderValue"></ur-slider>
-      <span>带输入框</span>
-      <ur-slider v-model="sliderValue" show-input></ur-slider>
-      <span>禁用</span>
-      <ur-slider v-model="sliderValue" disabled></ur-slider>
-      <span>竖向</span>
-      <ur-slider v-model="sliderValue" vertical style="height: 150px;"></ur-slider>
-    </div>
-    <div>
-      <p class="title">进度条</p>
-      <ur-progress :percentage="50"></ur-progress>
-      <ur-progress :percentage="10" type="circle"></ur-progress>
-    </div>
-    <div>
-      <p class="title">通知</p>
-      <ur-button class="space" plain @click="open1">可自动关闭</ur-button>
-      <ur-button class="space" plain @click="open2">不会自动关闭</ur-button>
-    </div>
-    <div>
-      <p class="title">弹框</p>
-      <ur-button class="space" type="text" @click="openMessageBox">点击打开 Message Box</ur-button>
-      <ur-button class="space" type="text" @click="openMessageBoxConfirm">确认消息</ur-button>
-      <ur-button class="space" type="text" @click="openMessageBoxCommit">提交内容</ur-button>
-    </div>
-    <div>
-      <p class="title">对话框</p>
-      <ur-button class="space" @click="dialogVisible = true">打开</ur-button>
-      <ur-button class="space" type="text" @click="outerVisible = true">点击打开外层 Dialog</ur-button>
-      <ur-dialog title="提示" v-model="dialogVisible" width="30%" :before-close="handleDialogClose">
-        <span>这是一段信息</span>
-        <template #footer>
-          <span class="dialog-footer">
-            <ur-button @click="dialogVisible = false">取 消</ur-button>
-            <ur-button type="primary" @click="dialogVisible = false">确 定</ur-button>
-          </span>
-        </template>
-      </ur-dialog>
-      <ur-dialog title="外层 Dialog" v-model="outerVisible">
-        <ur-dialog width="30%" title="内层 Dialog" v-model="innerVisible" append-to-body></ur-dialog>
-        <template #footer>
-          <div class="dialog-footer">
-            <ur-button @click="outerVisible = false">取 消</ur-button>
-            <ur-button type="primary" @click="innerVisible = true">打开内层 Dialog</ur-button>
-          </div>
-        </template>
-      </ur-dialog>
-    </div>
-    <div>
-      <p class="title">标签页</p>
-      <ur-tabs v-model="tabActiveName">
-        <ur-tab-pane label="用户管理" name="first">用户管理</ur-tab-pane>
-        <ur-tab-pane label="配置管理" name="second">配置管理</ur-tab-pane>
-        <ur-tab-pane label="角色管理" name="third">角色管理</ur-tab-pane>
-        <ur-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</ur-tab-pane>
-      </ur-tabs>
+      <slider-demo/>
     </div>
     <div>
       <p class="title">时间选择器</p>
-      <time-picker/>
+      <time-picker-demo/>
     </div>
     <div>
       <p class="title">时间选择器</p>
-      <time-select/>
+      <time-select-demo/>
     </div>
     <div>
       <p class="title">日期选择器</p>
-      <date-picker/>
+      <date-picker-demo/>
     </div>
     <div>
       <p class="title">日期时间选择器</p>
-      <date-time-picker/>
+      <date-time-picker-demo/>
     </div>
     <div>
       <p class="title">表格</p>
       <table-demo/>
     </div>
     <div>
+      <p class="title">标签</p>
+      <tag-demo/>
+    </div>
+    <div>
+      <p class="title">标签页</p>
+      <tabs-demo/>
+    </div>
+    <div>
+      <p class="title">面包屑</p>
+      <breadcrumb-demo/>
+    </div>
+    <div>
+      <p class="title">进度条</p>
+      <progress-demo/>
+    </div>
+    <div>
+      <p class="title">分页</p>
+      <pagination-demo/>
+    </div>
+    <div>
+      <p class="title">气泡</p>
+      <tooltip-demo/>
+    </div>
+    <div>
+      <p class="title">弹框</p>
+      <message-box-demo/>
+    </div>
+    <div>
+      <p class="title">通知</p>
+      <notification-demo/>
+    </div>
+    <div>
+      <p class="title">对话框</p>
+      <dialog-demo/>
+    </div>
+    <div>
       <p class="title">跑马灯</p>
-      <test-carousel></test-carousel>
+      <carousel-demo/>
     </div>
   </div>
 </template>
@@ -142,15 +99,25 @@ import ButtonDemo from './components/button.vue';
 import RadioDemo from './components/radio.vue';
 import CheckboxDemo from './components/checkbox.vue';
 import InputDemo from './components/input.vue';
-import TagDemo from './components/tag.vue';
+import InputNumberDemo from './components/input-number.vue';
 import SelectDemo from './components/select.vue';
-import BreadcrumbDemo from './components/breadcrumb.vue';
-import TestCarousel from './components/carousel.vue';
-import TimePicker from './components/time-picker.vue';
-import TimeSelect from './components/time-select.vue';
-import DatePicker from './components/date-picker.vue';
-import DateTimePicker from './components/date-time-picker.vue';
+import SwitchDemo from './components/switch.vue'
+import SliderDemo from './components/slider.vue';
+import TimePickerDemo from './components/time-picker.vue';
+import TimeSelectDemo from './components/time-select.vue';
+import DatePickerDemo from './components/date-picker.vue';
+import DateTimePickerDemo from './components/date-time-picker.vue';
 import TableDemo from './components/table.vue';
+import TagDemo from './components/tag.vue';
+import ProgressDemo from './components/progress.vue';
+import MessageDemo from './components/message.vue';
+import MessageBoxDemo from './components/message-box.vue';
+import NotificationDemo from './components/notification.vue';
+import TabsDemo from './components/tabs.vue';
+import BreadcrumbDemo from './components/breadcrumb.vue';
+import DialogDemo from './components/dialog.vue';
+import TooltipDemo from './components/tooltip.vue';
+import CarouselDemo from './components/carousel.vue';
 
 export default defineComponent({
   name: 'App',
@@ -159,15 +126,25 @@ export default defineComponent({
     RadioDemo,
     CheckboxDemo,
     InputDemo,
-    TagDemo,
-    BreadcrumbDemo,
+    InputNumberDemo,
     SelectDemo,
-    TestCarousel,
-    TimePicker,
-    TimeSelect,
-    DatePicker,
-    DateTimePicker,
+    SwitchDemo,
+    SliderDemo,
+    TimePickerDemo,
+    TimeSelectDemo,
+    DatePickerDemo,
+    DateTimePickerDemo,
     TableDemo,
+    TagDemo,
+    ProgressDemo,
+    MessageDemo,
+    MessageBoxDemo,
+    NotificationDemo,
+    TabsDemo,
+    BreadcrumbDemo,
+    DialogDemo,
+    TooltipDemo,
+    CarouselDemo,
   },
   data() {
     return {

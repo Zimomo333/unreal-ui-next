@@ -15,12 +15,8 @@
       -webkit-box-sizing: border-box;
     }
 
-    &.in-range div {
-      background-color: #f2f6fc;
-
-      &:hover {
-        background-color: #f2f6fc;
-      }
+    &.in-range {
+      box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
     }
   }
 
@@ -116,18 +112,13 @@
 
     &.end-date div,
     &.start-date div {
-      color: #fff;
+      color: green;
+      font-size: .9rem;
+      font-weight: 700;
     }
 
-    &.end-date span {
-      background-color: #409eff;
-    }
 
     &.start-date {
-      span {
-        background-color: #409eff;
-      }
-
       div {
         margin-left: 5px;
         border-top-left-radius: 15px;

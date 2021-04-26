@@ -8,15 +8,29 @@
     type="datetime"
     placeholder="选择日期时间"
     align="right"
-    :shortcuts="shortcuts"
+    :shortcuts="shortcuts1"
   ></ur-date-picker>
-  <span class="demonstration">设置默认时间</span>
+  <br />
+  <br />
+  <span class="demonstration">默认</span>
   <ur-date-picker
     class="space"
     v-model="value3"
-    type="datetime"
-    placeholder="选择日期时间"
-    :default-time="defaultTime"
+    type="datetimerange"
+    range-separator="至"
+    start-placeholder="开始日期"
+    end-placeholder="结束日期"
+  ></ur-date-picker>
+  <span class="demonstration">带快捷选项</span>
+  <ur-date-picker
+    class="space"
+    v-model="value4"
+    type="datetimerange"
+    :shortcuts="shortcuts2"
+    range-separator="至"
+    start-placeholder="开始日期"
+    end-placeholder="结束日期"
+    align="right"
   ></ur-date-picker>
 </template>
 
@@ -24,7 +38,7 @@
 export default {
   data() {
     return {
-      shortcuts: [
+      shortcuts1: [
         {
           text: '今天',
           value: new Date(),
@@ -46,10 +60,39 @@ export default {
           })(),
         },
       ],
+      shortcuts2: [
+        {
+          text: '最近一周',
+          value: (() => {
+            const end = new Date();
+            const start = new Date();
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);
+            return [start, end];
+          })(),
+        },
+        {
+          text: '最近一个月',
+          value: (() => {
+            const end = new Date();
+            const start = new Date();
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);
+            return [start, end];
+          })(),
+        },
+        {
+          text: '最近三个月',
+          value: (() => {
+            const end = new Date();
+            const start = new Date();
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);
+            return [start, end];
+          })(),
+        },
+      ],
       value1: '',
       value2: '',
       value3: '',
-      defaultTime: new Date(2000, 1, 1, 12, 0, 0), // '12:00:00'
+      value4: '',
     };
   },
 };

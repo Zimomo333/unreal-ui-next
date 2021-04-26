@@ -26,10 +26,12 @@
   font-size: 13px;
   height: 100%;
 
-  .ur-icon-minus, .ur-icon-plus {
+  .ur-icon-minus,
+  .ur-icon-plus {
     height: 100%;
   }
-  .ur-icon-arrow-down, .ur-icon-arrow-up {
+  .ur-icon-arrow-down,
+  .ur-icon-arrow-up {
     height: 50%;
   }
 }
@@ -67,6 +69,14 @@
   .ur-input-number__increase {
     border-color: #e4e7ed;
     color: #e4e7ed;
+    opacity: 0.5;
+
+    .ur-button {
+      cursor: not-allowed;
+      &:active {
+        box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
+      }
+    }
   }
 
   .ur-input-number__decrease:hover,
@@ -148,7 +158,7 @@
 
       .ur-button {
         width: 100%;
-        padding: .1rem 0 0 0;
+        padding: 0.1rem 0 0 0;
       }
     }
 
@@ -159,11 +169,11 @@
         border-radius: 0 0.55rem 0 0;
         box-shadow: 3px 0 6px #b8b9be, -3px -3px 6px #ffffff;
         &:active {
-          box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
+          box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
         }
       }
     }
-    
+
     .ur-input-number__decrease {
       right: 0;
       bottom: 0;
@@ -171,7 +181,7 @@
       left: auto;
       border-right: none;
       border-radius: 0 0 4px;
-      
+
       .ur-icon-arrow-down {
         height: 100%;
         border-radius: 0 0 0.55rem 0;
