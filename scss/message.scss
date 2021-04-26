@@ -3,7 +3,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background: #e6e7ee;
-  border: 0.0625rem solid #D1D9E6;
+  border: 0.0625rem solid #d1d9e6;
   border-radius: 0.55rem;
   -webkit-box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
   box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
@@ -40,36 +40,24 @@
   }
 }
 
-// .ur-message--info .ur-message__content {
-//   color: #909399;
-// }
+.ur-message--info {
+  .ur-message__content {
+  }
+}
 
-// .ur-message--success {
-//   background-color: #f0f9eb;
-//   border-color: #e1f3d8;
+.ur-message--success {
+  box-shadow: 3px 3px 3px #18634b, -3px -3px 6px #ffffff;
+  .ur-message__content {
+    color: #18634b;
+  }
+}
 
-//   .ur-message__content {
-//     color: #67c23a;
-//   }
-// }
-
-// .ur-message--warning {
-//   background-color: #fdf6ec;
-//   border-color: #faecd8;
-
-//   .ur-message__content {
-//     color: #e6a23c;
-//   }
-// }
-
-// .ur-message--error {
-//   background-color: #fef0f0;
-//   border-color: #fde2e2;
-
-//   .ur-message__content {
-//     color: #f56c6c;
-//   }
-// }
+.ur-message--error {
+  box-shadow: 3px 3px 3px #a91e2c, -3px -3px 6px #ffffff;
+  .ur-message__content {
+    color: #a91e2c;
+  }
+}
 
 .ur-message__icon {
   margin-right: 10px;
@@ -106,11 +94,11 @@
 
 .ur-message {
   .ur-icon-success {
-    color: #67c23a;
+    color: #18634b;
   }
 
   .ur-icon-error {
-    color: #f56c6c;
+    color: #a91e2c;
   }
 
   .ur-icon-info {
