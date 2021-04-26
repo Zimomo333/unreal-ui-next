@@ -5,6 +5,12 @@
       <button-demo/>
     </div>
     <div>
+      <p class="title">单选框</p>
+      <radio-demo/>
+      <p class="title">多选框</p>
+      <checkbox-demo/>
+    </div>
+    <div>
       <p class="title">输入框</p>
       <ur-input class="input-demo" v-model="input" placeholder="请输入内容" clearable>
         <template #prepend>Http://</template>
@@ -53,22 +59,6 @@
         </ur-breadcrumb-item>
         <ur-breadcrumb-item>活动列表</ur-breadcrumb-item>
       </ur-breadcrumb>
-    </div>
-    <div>
-      <p class="title">单选框</p>
-      <ur-radio-group v-model="radio">
-        <ur-radio :label="3">备选项</ur-radio>
-        <ur-radio :label="6">备选项</ur-radio>
-        <ur-radio :label="9">备选项</ur-radio>
-      </ur-radio-group>
-      <p class="title">多选框</p>
-      <ur-checkbox-group v-model="checkList">
-        <ur-checkbox label="复选框 A"></ur-checkbox>
-        <ur-checkbox label="复选框 B"></ur-checkbox>
-        <ur-checkbox label="复选框 C"></ur-checkbox>
-        <ur-checkbox label="禁用" disabled></ur-checkbox>
-        <ur-checkbox label="选中且禁用" disabled></ur-checkbox>
-      </ur-checkbox-group>
     </div>
     <div>
       <p class="title">分页</p>
@@ -183,6 +173,8 @@
 <script>
 import { defineComponent, h } from 'vue';
 import ButtonDemo from './components/button.vue';
+import RadioDemo from './components/radio.vue';
+import CheckboxDemo from './components/checkbox.vue';
 import SelectDemo from './components/select.vue';
 import TestCarousel from './components/carousel.vue';
 import TimePicker from './components/time-picker.vue';
@@ -195,6 +187,8 @@ export default defineComponent({
   name: 'App',
   components: {
     ButtonDemo,
+    RadioDemo,
+    CheckboxDemo,
     SelectDemo,
     TestCarousel,
     TimePicker,

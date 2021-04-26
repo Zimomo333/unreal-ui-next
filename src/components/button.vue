@@ -41,11 +41,3 @@
   <ur-button class="space" size="mini" round>迷你按钮</ur-button>
 </template>
 
-<script>
-  
-</script>
-
-<style>
-
-</style>
-

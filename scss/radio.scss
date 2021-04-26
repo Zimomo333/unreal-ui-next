@@ -22,6 +22,10 @@
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+
+  &.is-disabled {
+    opacity: .5;
+  }
 }
 .ur-radio.is-bordered {
   padding: 12px 20px 0 10px;
@@ -36,12 +40,12 @@
 }
 .ur-radio.is-bordered.is-disabled {
   cursor: not-allowed;
-  border-color: #ebeef5;
+  // border-color: #ebeef5;
 }
 .ur-radio__input.is-disabled .ur-radio__inner,
 .ur-radio__input.is-disabled.is-checked .ur-radio__inner {
-  background-color: #f5f7fa;
-  border-color: #e4e7ed;
+  background-color: #D1D9E6;
+  // border-color: #e4e7ed;
 }
 .ur-radio.is-bordered + .ur-radio.is-bordered {
   margin-left: 10px;
@@ -98,7 +102,7 @@
   background-color: #c0c4cc;
 }
 .ur-radio__input.is-disabled + span.ur-radio__label {
-  color: #c0c4cc;
+  // color: #c0c4cc;
   cursor: not-allowed;
 }
 .ur-radio__input.is-checked .ur-radio__inner {
