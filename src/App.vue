@@ -2,12 +2,7 @@
   <div id="app">
     <div>
       <p class="title">按钮</p>
-      <ur-button class="button" size="large">超大尺寸</ur-button>
-      <ur-button class="button" size="medium">中等尺寸</ur-button>
-      <ur-button class="button" size="small">小型尺寸</ur-button>
-      <ur-button class="button" size="mini">超小尺寸</ur-button>
-      <ur-button class="button" :loading="true">Loading...</ur-button>
-      <ur-button class="button active">按下</ur-button>
+      <button-demo/>
     </div>
     <div>
       <p class="title">输入框</p>
@@ -187,6 +182,7 @@
 
 <script>
 import { defineComponent, h } from 'vue';
+import ButtonDemo from './components/button.vue';
 import SelectDemo from './components/select.vue';
 import TestCarousel from './components/carousel.vue';
 import TimePicker from './components/time-picker.vue';
@@ -198,6 +194,7 @@ import TableDemo from './components/table.vue';
 export default defineComponent({
   name: 'App',
   components: {
+    ButtonDemo,
     SelectDemo,
     TestCarousel,
     TimePicker,
@@ -384,6 +381,6 @@ body {
 }
 
 .space {
-  margin: 0 1rem;
+  margin: 0 .5rem;
 }
 </style>
