@@ -242,7 +242,7 @@ export default defineComponent({
       class: [
         'ur-pagination',
         {
-          'is-background': this.background,
+          'is-background': true,
           'ur-pagination--small': this.small,
         },
       ],

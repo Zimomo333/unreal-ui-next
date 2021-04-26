@@ -81,11 +81,11 @@
 .ur-progress {
   &.is-success {
     .ur-progress-bar__inner {
-      background-color: #67C23A;
+      background-color: #18634b;
     }
 
     .ur-progress__text {
-      color: #67C23A;
+      color: #18634b;
     }
   }
 
@@ -101,11 +101,11 @@
 
   &.is-exception {
     .ur-progress-bar__inner {
-      background-color: #F56C6C;
+      background-color: #a91e2c;
     }
 
     .ur-progress__text {
-      color: #F56C6C;
+      color: #a91e2c;
     }
   }
 }
@@ -133,7 +133,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  background-color: #409EFF;
+  background-color: #0056b3;
   text-align: right;
   border-radius: 100px;
   line-height: 1;

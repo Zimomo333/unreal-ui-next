@@ -55,14 +55,6 @@
       <tag-demo/>
     </div>
     <div>
-      <p class="title">标签页</p>
-      <tabs-demo/>
-    </div>
-    <div>
-      <p class="title">面包屑</p>
-      <breadcrumb-demo/>
-    </div>
-    <div>
       <p class="title">进度条</p>
       <progress-demo/>
     </div>
@@ -71,8 +63,8 @@
       <pagination-demo/>
     </div>
     <div>
-      <p class="title">气泡</p>
-      <tooltip-demo/>
+      <p class="title">消息提示</p>
+      <message-demo/>
     </div>
     <div>
       <p class="title">弹框</p>
@@ -83,8 +75,20 @@
       <notification-demo/>
     </div>
     <div>
+      <p class="title">标签页</p>
+      <tabs-demo/>
+    </div>
+    <div>
+      <p class="title">面包屑</p>
+      <breadcrumb-demo/>
+    </div>
+    <div>
       <p class="title">对话框</p>
       <dialog-demo/>
+    </div>
+    <div>
+      <p class="title">气泡</p>
+      <tooltip-demo/>
     </div>
     <div>
       <p class="title">跑马灯</p>
@@ -110,6 +114,7 @@ import DateTimePickerDemo from './components/date-time-picker.vue';
 import TableDemo from './components/table.vue';
 import TagDemo from './components/tag.vue';
 import ProgressDemo from './components/progress.vue';
+import PaginationDemo from './components/pagination.vue'
 import MessageDemo from './components/message.vue';
 import MessageBoxDemo from './components/message-box.vue';
 import NotificationDemo from './components/notification.vue';
@@ -137,6 +142,7 @@ export default defineComponent({
     TableDemo,
     TagDemo,
     ProgressDemo,
+    PaginationDemo,
     MessageDemo,
     MessageBoxDemo,
     NotificationDemo,
