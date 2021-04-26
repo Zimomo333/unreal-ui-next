@@ -16,14 +16,7 @@
     </div>
     <div>
       <p class="title">标签</p>
-      <ur-tag
-        class="tag-demo"
-        v-for="tag in tags"
-        :key="tag.name"
-        closable
-        @close="handleClose"
-        :type="tag.type"
-      >{{tag.name}}</ur-tag>
+      <tag-demo/>
     </div>
     <div style="padding-bottom: 20rem;">
       <p class="title">下拉框多选</p>
@@ -163,6 +156,7 @@ import ButtonDemo from './components/button.vue';
 import RadioDemo from './components/radio.vue';
 import CheckboxDemo from './components/checkbox.vue';
 import InputDemo from './components/input.vue';
+import TagDemo from './components/tag.vue';
 import SelectDemo from './components/select.vue';
 import TestCarousel from './components/carousel.vue';
 import TimePicker from './components/time-picker.vue';
@@ -178,6 +172,7 @@ export default defineComponent({
     RadioDemo,
     CheckboxDemo,
     InputDemo,
+    TagDemo,
     SelectDemo,
     TestCarousel,
     TimePicker,
@@ -333,8 +328,6 @@ export default defineComponent({
 <style lang="scss">
 body {
   background: #e6e7ee;
-  display: flex;
-  justify-content: center;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
