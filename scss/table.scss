@@ -372,8 +372,10 @@
   left: 0;
   overflow-x: hidden;
   overflow-y: hidden;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+  background-color: #e6e7ee;
+  border-radius: 0.55rem 0 0 0.55rem;
+  box-shadow: inset 2px 2px 5px #b8b9be, 0 0 10px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: inset 2px 2px 5px #b8b9be, 0 0 10px rgba(0, 0, 0, 0.12);
 }
 
 .ur-table__fixed-right {
@@ -382,8 +384,9 @@
   left: 0;
   overflow-x: hidden;
   overflow-y: hidden;
+  background-color: #e6e7ee;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+  box-shadow: -3px -3px 6px #ffffff;
 
   &::before {
     content: '';
@@ -493,8 +496,8 @@
   position: relative;
 
   &.is-scrolling-left ~ .ur-table__fixed {
-    -webkit-box-shadow: none;
-    box-shadow: none;
+    // -webkit-box-shadow: none;
+    // box-shadow: none;
   }
 
   &.is-scrolling-none ~ {
@@ -506,8 +509,8 @@
   }
 
   &.is-scrolling-right ~ .ur-table__fixed-right {
-    -webkit-box-shadow: none;
-    box-shadow: none;
+    // -webkit-box-shadow: none;
+    // box-shadow: none;
   }
 
   .ur-table--border.is-scrolling-right ~ .ur-table__fixed-right {
@@ -592,7 +595,7 @@
     }
 
     > td {
-      background-color: #f5f7fa;
+      background-color: rgba(38, 40, 51, 0.04);
     }
   }
 
