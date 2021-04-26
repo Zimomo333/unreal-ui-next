@@ -705,12 +705,6 @@
   }
 }
 
-.ur-input__inner,
-.ur-textarea__inner {
-  color: #606266;
-  -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
 .ur-time-range-picker {
   width: 354px;
   overflow: visible;
@@ -742,7 +736,6 @@
 .ur-textarea {
   position: relative;
   display: inline-block;
-  width: 100%;
   vertical-align: bottom;
   font-size: 14px;
 }

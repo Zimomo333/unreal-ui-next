@@ -12,20 +12,7 @@
     </div>
     <div>
       <p class="title">输入框</p>
-      <ur-input class="input-demo" v-model="input" placeholder="请输入内容" clearable>
-        <template #prepend>Http://</template>
-      </ur-input>
-      <br />
-      <ur-input class="input-demo" placeholder="请输入内容" clearable>
-        <template #append>.com</template>
-      </ur-input>
-      <br />
-      <ur-input class="input-demo" v-model="input" placeholder="请输入内容" show-password>
-        <template #prepend>密码</template>
-        <template #append>
-          <ur-button>提交</ur-button>
-        </template>
-      </ur-input>
+      <input-demo/>
     </div>
     <div>
       <p class="title">标签</p>
@@ -175,6 +162,7 @@ import { defineComponent, h } from 'vue';
 import ButtonDemo from './components/button.vue';
 import RadioDemo from './components/radio.vue';
 import CheckboxDemo from './components/checkbox.vue';
+import InputDemo from './components/input.vue';
 import SelectDemo from './components/select.vue';
 import TestCarousel from './components/carousel.vue';
 import TimePicker from './components/time-picker.vue';
@@ -189,6 +177,7 @@ export default defineComponent({
     ButtonDemo,
     RadioDemo,
     CheckboxDemo,
+    InputDemo,
     SelectDemo,
     TestCarousel,
     TimePicker,
@@ -365,10 +354,6 @@ body {
     border: 0;
     box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
   }
-}
-.input-demo {
-  margin: 0 0 0.8rem;
-  width: 25rem;
 }
 .tag-demo {
   margin: 0 0.4rem;
