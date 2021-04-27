@@ -1,4 +1,10 @@
 <template>
+  <ur-carousel class="carousel-demo" direction="horizontal">
+    <ur-carousel-item v-for="item in items" :key="item.id">
+      <img :src="item.imgSrc" />
+    </ur-carousel-item>
+  </ur-carousel>
+
   <ur-carousel class="carousel-demo" direction="horizontal" trigger="click">
     <ur-carousel-item v-for="item in items" :key="item.id">
       <img :src="item.imgSrc" />

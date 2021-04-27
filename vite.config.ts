@@ -32,6 +32,9 @@ export default defineConfig({
           resolveStyle: (name) => {
             return `unreal-ui-next/lib/${name}/style.css`;
           },
+          resolveComponent: (name) => {   // 必须，否则按需导入时有Bug
+            return `unreal-ui-next/lib/${name}`;
+          },
         }
       ]
     })

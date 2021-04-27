@@ -20,7 +20,7 @@ import InputNumber from './input-number'
 import Tooltip from './tooltip'
 import Slider from './slider'
 import Progress from './progress'
-import Notify from './notification'
+import Notification from './notification'
 import Dialog from './dialog'
 import MessageBox from './message-box'
 import Message from './message'
@@ -64,7 +64,7 @@ const components = [
 ];
 
 const plugins = [
-  Notify,
+  Notification,
   MessageBox,
   Message,
 ]
@@ -96,7 +96,7 @@ export const UrInputNumber: SFCWithInstall<typeof InputNumber> = InputNumber
 export const UrTooltip: SFCWithInstall<typeof Tooltip> = Tooltip
 export const UrSlider: SFCWithInstall<typeof Slider> = Slider
 export const UrProgress: SFCWithInstall<typeof Progress> = Progress
-export const UrNotify: SFCWithInstall<typeof Notify> = Notify
+export const UrNotification: SFCWithInstall<typeof Notification> = Notification
 export const UrDialog: SFCWithInstall<typeof Dialog> = Dialog
 export const UrMessageBox: SFCWithInstall<typeof MessageBox> = MessageBox
 export const UrMessage: SFCWithInstall<typeof Message> = Message
@@ -131,7 +131,7 @@ export default {
   UrTooltip,
   UrSlider,
   UrProgress,
-  UrNotify,
+  UrNotification,
   UrDialog,
   UrMessageBox,
   UrMessage,
