@@ -13,23 +13,22 @@
   <ur-checkbox v-model="checked2" disabled>选项2</ur-checkbox>
   <br><br>
   <ur-checkbox-group
-    v-model="checkedCities"
+    v-model="checkedOptions"
     :min="1"
     :max="2">
-    <ur-checkbox v-for="city in cities" :label="city" :key="city">{{city}}</ur-checkbox>
+    <ur-checkbox v-for="option in Options" :label="option" :key="option">{{option}}</ur-checkbox>
   </ur-checkbox-group>
 </template>
 
 <script>
-  const cityOptions = ['上海', '北京', '广州', '深圳'];
   export default {
     data () {
       return {
-        checkList: ['选中且禁用','复选框 A'],
+        checkList: ['选中且禁用','多选框 A'],
         checked1: false,
         checked2: true,
-        checkedCities: ['上海', '北京'],
-        cities: cityOptions,
+        checkedOptions: ['选项1', '选项4'],
+        Options: ['选项1', '选项2', '选项3', '选项4'],
       };
     }
   };

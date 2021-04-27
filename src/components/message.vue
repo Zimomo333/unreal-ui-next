@@ -1,8 +1,8 @@
 
 <template>
-  <ur-button class="space" :plain="true" @click="open1">消息</ur-button>
-  <ur-button class="space" :plain="true" @click="open2">成功</ur-button>
-  <ur-button class="space" :plain="true" @click="open3">错误</ur-button>
+  <ur-button class="space" @click="open1">消息</ur-button>
+  <ur-button class="space" @click="open2">成功</ur-button>
+  <ur-button class="space" @click="open3">错误</ur-button>
 </template>
 
 <script>

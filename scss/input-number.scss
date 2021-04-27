@@ -65,11 +65,15 @@
 }
 
 .ur-input-number.is-disabled {
+  opacity: 0.5;
+  .ur-input__inner {
+    opacity: 1;
+  }
+  
   .ur-input-number__decrease,
   .ur-input-number__increase {
     border-color: #e4e7ed;
     color: #e4e7ed;
-    opacity: 0.5;
 
     .ur-button {
       cursor: not-allowed;
