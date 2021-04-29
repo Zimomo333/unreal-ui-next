@@ -55,7 +55,7 @@
         <template #default="scope">{{ scope.row.date }}</template>
       </ur-table-column>
       <ur-table-column prop="name" label="姓名" width="120"></ur-table-column>
-      <ur-table-column prop="address" label="地址" show-overflow-tooltip></ur-table-column>
+      <ur-table-column prop="address" label="地址"></ur-table-column>
     </ur-table>
   </div>
   <div class="table">
