@@ -14,6 +14,7 @@
       @mouseenter="onMouseenter('left')"
       @mouseleave="quickprevIconClass = 'ur-icon-more'"
     >
+    ...
     </li>
     <li
       v-for="pager in pagers"
@@ -30,6 +31,7 @@
       @mouseenter="onMouseenter('right')"
       @mouseleave="quicknextIconClass = 'ur-icon-more'"
     >
+    ...
     </li>
     <li
       v-if="pageCount > 1"
