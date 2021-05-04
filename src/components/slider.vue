@@ -65,9 +65,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .block {
   width: 40rem;
   margin: 0 auto;
+}
+.vertical {
+  position: absolute;
+  top: 2500px;
+  left: 150px;
 }
 </style>

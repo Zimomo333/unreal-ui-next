@@ -1,6 +1,5 @@
 
 <template>
-
   <ur-checkbox-group v-model="checkList">
     <ur-checkbox label="多选框 A"></ur-checkbox>
     <ur-checkbox label="多选框 B"></ur-checkbox>

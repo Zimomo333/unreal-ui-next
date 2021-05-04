@@ -1,21 +1,24 @@
 <template>
-  <ur-time-picker
-    v-model="value1"
-    :disabled-hours="disabledHours"
-    :disabled-minutes="disabledMinutes"
-    :disabled-seconds="disabledSeconds"
-    placeholder="任意时间点"
-  ></ur-time-picker>
-  <ur-time-picker
-    is-range
-    arrow-control
-    v-model="value2"
-    range-separator="至"
-    start-placeholder="开始时间"
-    end-placeholder="结束时间"
-    placeholder="选择时间范围"
-    class="space"
-  ></ur-time-picker>
+  <div class="time-picker-wrap">
+    <ur-time-picker
+      class="time-picker-space"
+      v-model="value1"
+      :disabled-hours="disabledHours"
+      :disabled-minutes="disabledMinutes"
+      :disabled-seconds="disabledSeconds"
+      placeholder="任意时间点"
+    ></ur-time-picker>
+    <ur-time-picker
+      is-range
+      arrow-control
+      v-model="value2"
+      range-separator="至"
+      start-placeholder="开始时间"
+      end-placeholder="结束时间"
+      placeholder="选择时间范围"
+      class="time-picker-space"
+    ></ur-time-picker>
+  </div>
 </template>
 
 <script>
@@ -56,4 +59,10 @@ export default {
 </script>
 
 <style>
+.time-picker-space {
+  margin: 0 0.6rem;
+}
+.time-picker-wrap {
+  margin-bottom: 22rem;
+}
 </style>

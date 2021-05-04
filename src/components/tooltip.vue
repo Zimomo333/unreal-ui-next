@@ -55,7 +55,7 @@
 <style lang="scss">
 .box {
   width: 400px;
-  margin: 0 auto;
+  margin: 3rem auto;
 
   .top {
     text-align: center;

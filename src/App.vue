@@ -2,97 +2,97 @@
   <div id="app">
     <div>
       <p class="title">按钮</p>
-      <button-demo/>
+      <button-demo />
     </div>
     <div>
       <p class="title">单选框</p>
-      <radio-demo/>
+      <radio-demo />
       <p class="title">多选框</p>
-      <checkbox-demo/>
+      <checkbox-demo />
     </div>
     <div>
       <p class="title">输入框</p>
-      <input-demo/>
+      <input-demo />
     </div>
     <div>
       <p class="title">计数器</p>
-      <input-number-demo/>
+      <input-number-demo />
     </div>
-    <div style="padding-bottom: 20rem;">
+    <div>
       <p class="title">选择器</p>
-      <select-demo/>
+      <select-demo />
     </div>
     <div>
       <p class="title">开关</p>
-      <switch-demo/>
+      <switch-demo />
     </div>
     <div>
       <p class="title">滑块</p>
-      <slider-demo/>
+      <slider-demo />
     </div>
     <div>
       <p class="title">时间选择器</p>
-      <time-picker-demo/>
+      <time-picker-demo />
     </div>
     <div>
       <p class="title">时间选择器</p>
-      <time-select-demo/>
+      <time-select-demo />
     </div>
     <div>
       <p class="title">日期选择器</p>
-      <date-picker-demo/>
+      <date-picker-demo />
     </div>
     <div>
       <p class="title">日期时间选择器</p>
-      <date-time-picker-demo/>
+      <date-time-picker-demo />
     </div>
     <div>
       <p class="title">表格</p>
-      <table-demo/>
+      <table-demo />
     </div>
     <div>
       <p class="title">标签</p>
-      <tag-demo/>
+      <tag-demo />
     </div>
     <div>
       <p class="title">进度条</p>
-      <progress-demo/>
+      <progress-demo />
     </div>
     <div>
       <p class="title">分页</p>
-      <pagination-demo/>
+      <pagination-demo />
     </div>
     <div>
       <p class="title">消息提示</p>
-      <message-demo/>
+      <message-demo />
     </div>
     <div>
       <p class="title">弹框</p>
-      <message-box-demo/>
+      <message-box-demo />
     </div>
     <div>
       <p class="title">通知</p>
-      <notification-demo/>
+      <notification-demo />
     </div>
     <div>
       <p class="title">标签页</p>
-      <tabs-demo/>
+      <tabs-demo />
     </div>
     <div>
       <p class="title">面包屑</p>
-      <breadcrumb-demo/>
+      <breadcrumb-demo />
     </div>
     <div>
       <p class="title">对话框</p>
-      <dialog-demo/>
+      <dialog-demo />
     </div>
     <div>
       <p class="title">气泡</p>
-      <tooltip-demo/>
+      <tooltip-demo />
     </div>
     <div>
       <p class="title">跑马灯</p>
-      <carousel-demo/>
+      <carousel-demo />
     </div>
   </div>
 </template>
@@ -105,7 +105,7 @@ import CheckboxDemo from './components/checkbox.vue';
 import InputDemo from './components/input.vue';
 import InputNumberDemo from './components/input-number.vue';
 import SelectDemo from './components/select.vue';
-import SwitchDemo from './components/switch.vue'
+import SwitchDemo from './components/switch.vue';
 import SliderDemo from './components/slider.vue';
 import TimePickerDemo from './components/time-picker.vue';
 import TimeSelectDemo from './components/time-select.vue';
@@ -114,7 +114,7 @@ import DateTimePickerDemo from './components/date-time-picker.vue';
 import TableDemo from './components/table.vue';
 import TagDemo from './components/tag.vue';
 import ProgressDemo from './components/progress.vue';
-import PaginationDemo from './components/pagination.vue'
+import PaginationDemo from './components/pagination.vue';
 import MessageDemo from './components/message.vue';
 import MessageBoxDemo from './components/message-box.vue';
 import NotificationDemo from './components/notification.vue';
@@ -152,147 +152,6 @@ export default defineComponent({
     TooltipDemo,
     CarouselDemo,
   },
-  data() {
-    return {
-      input: '',
-      tags: [
-        { name: '标签一', type: '' },
-        { name: '标签二', type: 'success' },
-        { name: '标签三', type: 'info' },
-        { name: '标签四', type: 'warning' },
-        { name: '标签五', type: 'danger' },
-      ],
-      options: [
-        {
-          value: '选项1',
-          label: '选项1',
-        },
-        {
-          value: '选项2',
-          label: '选项2',
-        },
-        {
-          value: '选项3',
-          label: '选项3',
-        },
-        {
-          value: '选项4',
-          label: '选项4',
-        },
-        {
-          value: '选项5',
-          label: '选项5',
-        },
-        {
-          value: '选项6',
-          label: '选项6',
-        },
-        {
-          value: '选项7',
-          label: '选项7',
-        },
-        {
-          value: '选项8',
-          label: '选项8',
-        },
-        {
-          value: '选项9',
-          label: '选项9',
-        },
-      ],
-      value: '',
-      radio: 3,
-      checkList: ['选中且禁用', '复选框 A'],
-      switchValue: true,
-      inputNumber: 1,
-      sliderValue: 0,
-      dialogVisible: false,
-      outerVisible: false,
-      innerVisible: false,
-      tabActiveName: 'second',
-    };
-  },
-  mounted() {},
-  methods: {
-    handleClose(tag) {
-      this.tags.splice(this.tags.indexOf(tag), 1);
-    },
-    open1() {
-      this.$notify({
-        title: '标题名称',
-        message: h('i', {}, '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案'),
-      });
-    },
-
-    open2() {
-      this.$notify({
-        title: '提示',
-        message: '这是一条不会自动关闭的消息',
-        duration: 0,
-      });
-    },
-
-    openMessageBox() {
-      this.$alert('这是一段内容', '标题名称', {
-        confirmButtonText: '确定',
-        callback: action => {
-          this.$message({
-            type: 'info',
-            message: `action: ${ action }`
-          });
-        },
-      });
-    },
-
-    openMessageBoxConfirm() {
-      this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        type: 'warning',
-      })
-        .then(() => {
-          this.$message({
-            type: 'success',
-            message: '删除成功!',
-          });
-        })
-        .catch(() => {
-          this.$message({
-            type: 'info',
-            message: '已取消删除',
-          });
-        });
-    },
-
-    openMessageBoxCommit() {
-      this.$prompt('请输入邮箱', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        inputPattern: /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,
-        inputErrorMessage: '邮箱格式不正确',
-      })
-        .then(({ value }) => {
-          this.$message({
-            type: 'success',
-            message: '你的邮箱是: ' + value,
-          });
-        })
-        .catch(() => {
-          this.$message({
-            type: 'info',
-            message: '取消输入',
-          });
-        });
-    },
-
-    handleDialogClose(done) {
-      this.$confirm('确认关闭？')
-        .then(_ => {
-          done();
-        })
-        .catch(_ => {});
-    },
-  },
 });
 </script>
 
@@ -322,8 +181,14 @@ body {
 .tag-demo {
   margin: 0 0.4rem;
 }
-
 .space {
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
+}
+.date-margin {
+  margin: 0 1rem 22rem;
+}
+.test {
+  width: 4rem;
+  height: 4rem;
 }
 </style>

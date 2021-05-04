@@ -1,10 +1,9 @@
-
 <template>
   <span class="demonstration">默认</span>
-  <ur-date-picker class="space" v-model="value1" type="date" placeholder="选择日期"></ur-date-picker>
+  <ur-date-picker class="date-picker-space" v-model="value1" type="date" placeholder="选择日期"></ur-date-picker>
   <span class="demonstration">带快捷选项</span>
   <ur-date-picker
-    class="space"
+    class="date-picker-space"
     v-model="value2"
     align="right"
     type="date"
@@ -14,19 +13,17 @@
   ></ur-date-picker>
 
   <br />
-  <br />
   <span class="demonstration">默认</span>
   <ur-date-picker
-    class="space"
+    class="date-picker-space2"
     v-model="value3"
     type="daterange"
     range-separator="至"
     start-placeholder="开始日期"
     end-placeholder="结束日期"
   ></ur-date-picker>
-  <span class="demonstration">带快捷选项</span>
+  <span class="demonstration" style="margin: 0 .4rem 0 8rem;">带快捷选项</span>
   <ur-date-picker
-    class="space"
     v-model="value4"
     type="daterange"
     align="right"
@@ -104,6 +101,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>
