@@ -45,7 +45,7 @@ export const useSlide = (props: ISliderProps, initData: ISliderInitData, emit) =
   })
 
   const runwayStyle = computed(() => {
-    return (props.vertical ? { height: props.height } : {}) as CSSStyleDeclaration
+    return (props.vertical ? { height: props.height, width: props.width } : {}) as CSSStyleDeclaration
   })
 
   const barStyle = computed(() => {
@@ -53,6 +53,8 @@ export const useSlide = (props: ISliderProps, initData: ISliderInitData, emit) =
       ? {
         height: barSize.value,
         bottom: barStart.value,
+        width: props.width,
+        backgroundColor: props.bgColor,
       } : {
         width: barSize.value,
         left: barStart.value,

@@ -167,9 +167,17 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    width: {
+      type: String,
+      default: '0.4rem'
+    },
     height: {
       type: String,
       default: '',
+    },
+    bgColor: {
+      type: String,
+      default: '#18634b',
     },
     debounce: {
       type: Number,

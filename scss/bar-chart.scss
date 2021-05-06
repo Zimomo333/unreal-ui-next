@@ -1,0 +1,48 @@
+.ur-bar-chart {
+  display: inline-block;
+  .chart {
+    display: inline-block;
+    position: relative;
+    .bar {
+      display: inline-block;
+
+      .data-number {
+        line-height: 2;
+      }
+
+      .ur-slider {
+        .ur-slider__button-wrapper {
+          display: none;
+        }
+
+        .ur-slider__runway {
+          border-radius: 5px;
+        }
+
+        .ur-slider__bar {
+          background-color: #18634b;
+          border-radius: 5px;
+          z-index: 1;
+        }
+      }
+
+      .xAxis {
+        line-height: 2;
+      }
+    }
+    .yAxis {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: -10px;
+      .line {
+        width: 100%;
+        position: absolute;
+        border-bottom: 1px solid rgba(128, 128, 128, .2);
+        span {
+          float: left;
+        }
+      }
+    }
+  }
+}

@@ -31,6 +31,7 @@ import TimePicker from './time-picker'
 import TimeSelect from './time-select'
 import Table from './table'
 import TableColumn from './table-column'
+import BarChart from './bar-chart'
 
 // 存储组件列表
 const components = [
@@ -61,6 +62,7 @@ const components = [
   TimeSelect,
   Table,
   TableColumn,
+  BarChart,
 ];
 
 const plugins = [
@@ -107,6 +109,7 @@ export const UrTimePicker: SFCWithInstall<typeof TimePicker> = TimePicker
 export const UrTimeSelect: SFCWithInstall<typeof TimeSelect> = TimeSelect
 export const UrTable: SFCWithInstall<typeof Table> = Table
 export const UrTableColumn: SFCWithInstall<typeof TableColumn> = TableColumn
+export const UrBarChart: SFCWithInstall<typeof BarChart> = BarChart
 
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
@@ -142,4 +145,5 @@ export default {
   UrTimeSelect,
   UrTable,
   UrTableColumn,
+  UrBarChart,
 };

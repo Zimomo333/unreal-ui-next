@@ -94,6 +94,10 @@
       <p class="title">跑马灯</p>
       <carousel-demo />
     </div>
+    <div>
+      <p class="title">柱状图</p>
+      <bar-chart-demo />
+    </div>
   </div>
 </template>
 
@@ -123,6 +127,7 @@ import BreadcrumbDemo from './components/breadcrumb.vue';
 import DialogDemo from './components/dialog.vue';
 import TooltipDemo from './components/tooltip.vue';
 import CarouselDemo from './components/carousel.vue';
+import BarChartDemo from './components/bar-chart.vue';
 
 export default defineComponent({
   name: 'App',
@@ -151,6 +156,7 @@ export default defineComponent({
     DialogDemo,
     TooltipDemo,
     CarouselDemo,
+    BarChartDemo,
   },
 });
 </script>

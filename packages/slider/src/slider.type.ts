@@ -14,7 +14,9 @@ export interface ISliderProps {
   disabled: boolean
   range: boolean
   vertical: boolean
+  width: string
   height: string
+  bgColor: string
   debounce: number
   label: string
   tooltipClass: string
