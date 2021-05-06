@@ -80,6 +80,33 @@
       </ur-table-column>
     </ur-table>
   </div>
+  <div class="table">
+    <span class="table-title">排序</span>
+    <ur-table
+      :data="tableData"
+      style="width: 100%"
+      :default-sort="{prop: 'date', order: 'descending'}"
+    >
+      <ur-table-column prop="date" label="日期" sortable width="180"></ur-table-column>
+      <ur-table-column prop="name" label="姓名" sortable width="180"></ur-table-column>
+      <ur-table-column prop="address" label="地址" :formatter="formatter"></ur-table-column>
+    </ur-table>
+  </div>
+  <div class="table">
+    <span class="table-title">展开行</span>
+    <ur-table :data="tableData" style="width: 100%">
+      <ur-table-column type="expand">
+        <template #default="props">
+          <span>{{ props.row.date }}</span>
+          <span>{{ props.row.name }}</span>
+          <span>{{ props.row.address }}</span>
+        </template>
+      </ur-table-column>
+      <ur-table-column prop="date" label="日期" sortable width="180"></ur-table-column>
+      <ur-table-column prop="name" label="姓名" sortable width="180"></ur-table-column>
+      <ur-table-column prop="address" label="地址" :formatter="formatter"></ur-table-column>
+    </ur-table>
+  </div>
 </template>
 
 <script>
@@ -88,7 +115,7 @@ export default {
     return {
       tableData: [
         {
-          date: '2021-05-02',
+          date: '2021-05-01',
           name: '梁梓豪',
           address: '广东省东莞市松山湖',
         },
@@ -98,12 +125,12 @@ export default {
           address: '广东省东莞市松山湖',
         },
         {
-          date: '2021-05-02',
+          date: '2021-05-03',
           name: '梁梓豪',
           address: '广东省东莞市松山湖',
         },
         {
-          date: '2021-05-02',
+          date: '2021-05-04',
           name: '梁梓豪',
           address: '广东省东莞市松山湖',
         },
@@ -128,7 +155,7 @@ export default {
 }
 .table-title {
   display: block;
-  margin: .8rem 0;
+  margin: 0.8rem 0;
   font-size: 1.5rem;
 }
 </style>

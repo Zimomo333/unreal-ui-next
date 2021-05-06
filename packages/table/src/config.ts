@@ -119,10 +119,25 @@ export const cellForced = {
         [
           h('i', {
             class: 'ur-icon ur-icon-arrow-right',
-          }),
+          }, h('svg', {
+            t: '1617026397299',
+            class: 'icon',
+            viewBox: '0 0 1024 1024',
+            version: '1.1',
+            xmlns: 'http://www.w3.org/2000/svg',
+            "p-id":  '1173',
+            width: '14',
+            height: '14',
+          }, h('path', {
+            d: 'M361.6 19.2L848 507.2 361.6 995.2l-128-126.4 366.4-361.6L225.6 129.6 350.4 8z',
+            "p-id": '1174',
+            fill: '#8a8a8a',
+          }))),
         ],
       )
     },
+    // <svg t="1617026397299" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1173" width="200" height="200"><path d="M361.6 19.2L848 507.2 361.6 995.2l-128-126.4 366.4-361.6L225.6 129.6 350.4 8z" p-id="1174" fill="#8a8a8a"></path></svg>
+
     sortable: false,
     resizable: false,
     className: 'ur-table__expand-column',
