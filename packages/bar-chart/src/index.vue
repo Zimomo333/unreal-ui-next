@@ -25,7 +25,7 @@
 
 <script>
 import UrSlider from '@/packages/slider';
-import UrTooltip from '@/packages/tooltip'
+import UrTooltip from '@/packages/tooltip';
 
 export default {
   name: 'UrBarChart',
@@ -34,8 +34,14 @@ export default {
     UrTooltip,
   },
   props: {
-    xAxis: Array,
-    data: Array,
+    xAxis: {
+      type: Array,
+      default: [],
+    },
+    data: {
+      type: Array,
+      default: [],
+    },
     width: {
       type: String,
       default: '2rem',
@@ -53,16 +59,22 @@ export default {
     yMax() {
       return Math.max(...this.data);
     },
+    yMin() {
+      return Math.min(...this.data);
+    },
     yAxis() {
-      const step = parseInt(this.yMax / 5);
-      return [0, 0 + step, step + step, this.yMax - step, this.yMax];
+      const step = parseInt((this.yMax - this.yMin) / 4);
+      const array = [];
+      for (let i = this.yMin; i <= this.yMax; i+=step) {
+        array.push(i);
+      }
+      return array;
     },
   },
   methods: {
     percentageFormat(item) {
       return parseInt((item / this.yMax) * 100);
     },
-    positionFormat(y) {},
   },
 };
 </script>
