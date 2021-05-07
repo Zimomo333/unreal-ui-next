@@ -102,7 +102,7 @@
 </template>
 
 <script>
-import { defineComponent, h } from 'vue';
+import { defineComponent } from 'vue';
 import ButtonDemo from './components/button.vue';
 import RadioDemo from './components/radio.vue';
 import CheckboxDemo from './components/checkbox.vue';
@@ -161,7 +161,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style>
 body {
   background: #e6e7ee;
 }
@@ -177,24 +177,7 @@ body {
   font-size: 1.5rem;
   margin: 0.8rem 0;
 }
-.button {
-  margin: 0 1rem;
-  &.active {
-    border: 0;
-    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
-  }
-}
-.tag-demo {
-  margin: 0 0.4rem;
-}
 .space {
   margin: 0 0.5rem;
-}
-.date-margin {
-  margin: 0 1rem 22rem;
-}
-.test {
-  width: 4rem;
-  height: 4rem;
 }
 </style>

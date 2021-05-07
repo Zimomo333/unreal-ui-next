@@ -52,37 +52,36 @@
 <script>
 </script>
 
-<style lang="scss">
+<style>
 .box {
   width: 400px;
   margin: 3rem auto;
+}
+.top {
+  text-align: center;
+}
 
-  .top {
-    text-align: center;
-  }
+.left {
+  float: left;
+  width: 60px;
+}
 
-  .left {
-    float: left;
-    width: 60px;
-  }
+.right {
+  float: right;
+  width: 60px;
+}
 
-  .right {
-    float: right;
-    width: 60px;
-  }
+.bottom {
+  clear: both;
+  text-align: center;
+}
 
-  .bottom {
-    clear: both;
-    text-align: center;
-  }
+.item {
+  margin: 4px;
+}
 
-  .item {
-    margin: 4px;
-  }
-
-  .left .ur-tooltip__popper,
-  .right .ur-tooltip__popper {
-    padding: 8px 10px;
-  }
+.left .ur-tooltip__popper,
+.right .ur-tooltip__popper {
+  padding: 8px 10px;
 }
 </style>

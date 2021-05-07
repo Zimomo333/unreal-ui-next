@@ -1,21 +1,20 @@
 
 <template>
-
-      <ur-button class="space" type="text" @click="openMessageBox">点击打开 Message Box</ur-button>
-      <ur-button class="space" type="text" @click="openMessageBoxConfirm">确认消息</ur-button>
-      <ur-button class="space" type="text" @click="openMessageBoxCommit">提交内容</ur-button>
+  <ur-button class="space" type="text" @click="openMessageBox">点击打开 Message Box</ur-button>
+  <ur-button class="space" type="text" @click="openMessageBoxConfirm">确认消息</ur-button>
+  <ur-button class="space" type="text" @click="openMessageBoxCommit">提交内容</ur-button>
 </template>
 
 <script>
-  export default {
-    methods: {
-      openMessageBox() {
+export default {
+  methods: {
+    openMessageBox() {
       this.$alert('提示消息', '提示弹框', {
         confirmButtonText: '确定',
         callback: action => {
           this.$message({
             type: 'info',
-            message: `action: ${ action }`
+            message: `action: ${action}`,
           });
         },
       });
@@ -61,10 +60,6 @@
           });
         });
     },
-    }
-  }
+  },
+};
 </script>
-
-<style>
-
-</style>

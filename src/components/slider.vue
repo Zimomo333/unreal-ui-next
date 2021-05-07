@@ -65,7 +65,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .block {
   width: 40rem;
   margin: 0 auto;

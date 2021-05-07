@@ -6,8 +6,8 @@
   <ur-input class="input-demo" placeholder="请输入内容" v-model="input3" clearable></ur-input>
   <ur-input class="input-demo" placeholder="请输入密码" v-model="input4" show-password></ur-input>
   <br />
-  <ur-input class="input-demo2" type="textarea" :rows="2" placeholder="请输入内容" v-model="textarea"></ur-input>
   <ur-input class="input-demo2" type="textarea" autosize placeholder="请输入内容" v-model="textarea1"></ur-input>
+  <ur-input class="input-demo2" type="textarea" :rows="2" placeholder="请输入内容" v-model="textarea"></ur-input>
   <!-- <ur-input
     class="input-demo2"
     type="textarea"
@@ -32,12 +32,14 @@
     maxlength="30"
     show-word-limit
   ></ur-input>
+  <br />
   <ur-input class="input-demo2" v-model="input5" placeholder="请输入内容" clearable>
     <template #prepend>Http://</template>
   </ur-input>
   <ur-input class="input-demo2" v-model="input6" placeholder="请输入内容" clearable>
     <template #append>.com</template>
   </ur-input>
+  <br />
   <ur-input class="input-demo2" v-model="input7" placeholder="请输入内容" show-password>
     <template #prepend>密码</template>
     <template #append>

@@ -51,7 +51,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 .carousel-demo {
   width: 800px;
   height: 500px;

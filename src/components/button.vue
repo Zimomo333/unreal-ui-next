@@ -30,12 +30,12 @@
   <br><br>
   <ur-button :loading="true">加载中</ur-button>
   <br><br>
-  <ur-button class="button" size="large">超大尺寸</ur-button>
+  <ur-button class="space" size="large">超大尺寸</ur-button>
   <ur-button class="space" size="medium">中等按钮</ur-button>
   <ur-button class="space" size="small">小型按钮</ur-button>
   <ur-button class="space" size="mini">迷你按钮</ur-button>
   <br><br>
-  <ur-button class="button" size="large" round>超大尺寸</ur-button>
+  <ur-button class="space" size="large" round>超大尺寸</ur-button>
   <ur-button class="space" size="medium" round>中等按钮</ur-button>
   <ur-button class="space" size="small" round>小型按钮</ur-button>
   <ur-button class="space" size="mini" round>迷你按钮</ur-button>
