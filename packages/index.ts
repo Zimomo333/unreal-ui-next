@@ -35,6 +35,10 @@ import BarChart from './bar-chart'
 import Dropdown from './dropdown'
 import DropdownMenu from './dropdown-menu'
 import DropdownItem from './dropdown-item'
+import Menu from './menu'
+import MenuItemGroup from './menu-item-group'
+import MenuItem from './menu-item'
+import Submenu from './submenu'
 
 // 存储组件列表
 const components = [
@@ -69,6 +73,10 @@ const components = [
   Dropdown,
   DropdownMenu,
   DropdownItem,
+  Menu,
+  MenuItemGroup,
+  MenuItem,
+  Submenu,
 ];
 
 const plugins = [
@@ -119,6 +127,10 @@ export const UrBarChart: SFCWithInstall<typeof BarChart> = BarChart
 export const UrDropdown: SFCWithInstall<typeof Dropdown> = Dropdown
 export const UrDropdownMenu: SFCWithInstall<typeof DropdownMenu> = DropdownMenu
 export const UrDropdownItem: SFCWithInstall<typeof DropdownItem> = DropdownItem
+export const UrMenu: SFCWithInstall<typeof Menu> = Menu
+export const UrMenuItemGroup: SFCWithInstall<typeof MenuItemGroup> = MenuItemGroup
+export const UrMenuItem: SFCWithInstall<typeof MenuItem> = MenuItem
+export const UrSubmenu: SFCWithInstall<typeof Submenu> = Submenu
 
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
@@ -158,4 +170,8 @@ export default {
   UrDropdown,
   UrDropdownMenu,
   UrDropdownItem,
+  UrMenu,
+  UrMenuItemGroup,
+  UrMenuItem,
+  UrSubmenu,
 };

@@ -95,6 +95,10 @@
       <drop-down-demo />
     </div>
     <div>
+      <p class="title">导航菜单</p>
+      <menu-demo />
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <carousel-demo />
     </div>
@@ -133,6 +137,7 @@ import TooltipDemo from './components/tooltip.vue';
 import CarouselDemo from './components/carousel.vue';
 import BarChartDemo from './components/bar-chart.vue';
 import DropDownDemo from './components/dropdown.vue';
+import MenuDemo from './components/menu.vue'
 
 export default defineComponent({
   name: 'App',
@@ -163,6 +168,7 @@ export default defineComponent({
     CarouselDemo,
     BarChartDemo,
     DropDownDemo,
+    MenuDemo,
   },
 });
 </script>
