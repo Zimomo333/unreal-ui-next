@@ -676,12 +676,10 @@
   }
 
   &.is-light {
-    background: #FFF;
-    border: 1px solid #E4E7ED;
+    background: #e6e7ee;
 
     .ur-popper__arrow::before {
-      border: 1px solid #E4E7ED;
-      background: #FFF;
+      background: #303133;
       right: 0;
     }
   }

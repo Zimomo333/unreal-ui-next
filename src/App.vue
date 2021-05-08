@@ -91,6 +91,10 @@
       <tooltip-demo />
     </div>
     <div>
+      <p class="title">下拉菜单</p>
+      <drop-down-demo />
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <carousel-demo />
     </div>
@@ -128,6 +132,7 @@ import DialogDemo from './components/dialog.vue';
 import TooltipDemo from './components/tooltip.vue';
 import CarouselDemo from './components/carousel.vue';
 import BarChartDemo from './components/bar-chart.vue';
+import DropDownDemo from './components/dropdown.vue';
 
 export default defineComponent({
   name: 'App',
@@ -157,6 +162,7 @@ export default defineComponent({
     TooltipDemo,
     CarouselDemo,
     BarChartDemo,
+    DropDownDemo,
   },
 });
 </script>

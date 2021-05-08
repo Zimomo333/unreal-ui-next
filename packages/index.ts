@@ -32,6 +32,9 @@ import TimeSelect from './time-select'
 import Table from './table'
 import TableColumn from './table-column'
 import BarChart from './bar-chart'
+import Dropdown from './dropdown'
+import DropdownMenu from './dropdown-menu'
+import DropdownItem from './dropdown-item'
 
 // 存储组件列表
 const components = [
@@ -63,6 +66,9 @@ const components = [
   Table,
   TableColumn,
   BarChart,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
 ];
 
 const plugins = [
@@ -110,6 +116,9 @@ export const UrTimeSelect: SFCWithInstall<typeof TimeSelect> = TimeSelect
 export const UrTable: SFCWithInstall<typeof Table> = Table
 export const UrTableColumn: SFCWithInstall<typeof TableColumn> = TableColumn
 export const UrBarChart: SFCWithInstall<typeof BarChart> = BarChart
+export const UrDropdown: SFCWithInstall<typeof Dropdown> = Dropdown
+export const UrDropdownMenu: SFCWithInstall<typeof DropdownMenu> = DropdownMenu
+export const UrDropdownItem: SFCWithInstall<typeof DropdownItem> = DropdownItem
 
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
@@ -146,4 +155,7 @@ export default {
   UrTable,
   UrTableColumn,
   UrBarChart,
+  UrDropdown,
+  UrDropdownMenu,
+  UrDropdownItem,
 };
