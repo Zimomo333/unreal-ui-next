@@ -63,7 +63,7 @@ interface Callback {
 }
 
 export default defineComponent({
-  name: 'ElForm',
+  name: 'UrForm',
   props: {
     model: Object,
     rules: Object,

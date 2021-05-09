@@ -123,7 +123,7 @@
 }
 
 .ur-form-item__error {
-  color: #F56C6C;
+  color: #a91e2c;
   font-size: 12px;
   line-height: 1;
   padding-top: 4px;
@@ -144,17 +144,17 @@
   &.is-required:not(.is-no-asterisk) {
     .ur-form-item__labur-wrap > .ur-form-item__label:before, > .ur-form-item__label:before {
       content: "*";
-      color: #F56C6C;
+      color: #a91e2c;
       margin-right: 4px;
     }
   }
 
   &.is-error {
     .ur-input__inner, .ur-textarea__inner {
-      border-color: #F56C6C;
+      border-color: #a91e2c;
 
       &:focus {
-        border-color: #F56C6C;
+        border-color: #a91e2c;
       }
     }
 
@@ -163,7 +163,7 @@
     }
 
     .ur-input__validateIcon {
-      color: #F56C6C;
+      color: #a91e2c;
     }
   }
 }

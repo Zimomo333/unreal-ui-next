@@ -74,10 +74,10 @@
   padding-top: 15px;
 
   div.invalid > input {
-    border-color: #F56C6C;
+    border-color: #a91e2c;
 
     &:focus {
-      border-color: #F56C6C;
+      border-color: #a91e2c;
     }
   }
 }
@@ -111,7 +111,7 @@
   }
 
   &.ur-icon-error {
-    color: #F56C6C;
+    color: #a91e2c;
   }
 }
 
@@ -125,7 +125,7 @@
 }
 
 .ur-message-box__errormsg {
-  color: #F56C6C;
+  color: #a91e2c;
   font-size: 12px;
   min-height: 18px;
   margin-top: 2px;
