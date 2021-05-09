@@ -99,6 +99,10 @@
       <menu-demo />
     </div>
     <div>
+      <p class="title">表单</p>
+      <form-demo />
+    </div>
+    <div>
       <p class="title">跑马灯</p>
       <carousel-demo />
     </div>
@@ -137,7 +141,8 @@ import TooltipDemo from './components/tooltip.vue';
 import CarouselDemo from './components/carousel.vue';
 import BarChartDemo from './components/bar-chart.vue';
 import DropDownDemo from './components/dropdown.vue';
-import MenuDemo from './components/menu.vue'
+import MenuDemo from './components/menu.vue';
+import FormDemo from './components/form.vue';
 
 export default defineComponent({
   name: 'App',
@@ -169,6 +174,7 @@ export default defineComponent({
     BarChartDemo,
     DropDownDemo,
     MenuDemo,
+    FormDemo,
   },
 });
 </script>

@@ -39,6 +39,8 @@ import Menu from './menu'
 import MenuItemGroup from './menu-item-group'
 import MenuItem from './menu-item'
 import Submenu from './submenu'
+import Form from './form'
+import FormItem from './form-item'
 
 // 存储组件列表
 const components = [
@@ -77,6 +79,8 @@ const components = [
   MenuItemGroup,
   MenuItem,
   Submenu,
+  Form,
+  FormItem,
 ];
 
 const plugins = [
@@ -131,6 +135,8 @@ export const UrMenu: SFCWithInstall<typeof Menu> = Menu
 export const UrMenuItemGroup: SFCWithInstall<typeof MenuItemGroup> = MenuItemGroup
 export const UrMenuItem: SFCWithInstall<typeof MenuItem> = MenuItem
 export const UrSubmenu: SFCWithInstall<typeof Submenu> = Submenu
+export const UrForm: SFCWithInstall<typeof Form> = Form
+export const UrFormItem: SFCWithInstall<typeof FormItem> = FormItem
 
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
@@ -174,4 +180,6 @@ export default {
   UrMenuItemGroup,
   UrMenuItem,
   UrSubmenu,
+  UrForm,
+  UrFormItem,
 };
