@@ -17,14 +17,14 @@
       background-color: transparent;
       opacity: .6;
       border-color: #e4e7ed;
-      color: #c0c4cc;
+      // color: #c0c4cc;
       cursor: not-allowed;
 
       &::-webkit-input-placeholder,
       &:-ms-input-placeholder,
       &::-ms-input-placeholder,
       &::placeholder {
-        color: #c0c4cc;
+        // color: #c0c4cc;
       }
     }
   }
