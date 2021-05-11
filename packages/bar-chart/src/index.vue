@@ -2,7 +2,7 @@
   <div class="ur-bar-chart">
     <div class="chart">
       <div class="bar" v-for="(item, index) in data" :key="item">
-        <ur-tooltip class="item" effect="dark" :content="item" placement="top">
+        <ur-tooltip effect="dark" :content="item" placement="top">
           <ur-slider
             :modelValue="percentageFormat(item)"
             :width="width"

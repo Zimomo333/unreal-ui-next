@@ -1,6 +1,6 @@
 {
   "name": "unreal-ui-next",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "author": "zimomo",
   "description": "unreal-ui, vue3",
   "main": "lib/ur-index/index.js",

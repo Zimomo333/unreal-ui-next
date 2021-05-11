@@ -33,7 +33,7 @@ function useFormLabelWidth() {
   function getLabelWidthIndex(width: number) {
     const index = potentialLabelWidthArr.value.indexOf(width)
     if (index === -1) {
-      console.warn('[Element Warn][ElementForm]unexpected width ' + width)
+      console.warn('[Warn][ElementForm]unexpected width ' + width)
     }
     return index
   }
