@@ -7,11 +7,11 @@
   <br />
   <ur-tag
     class="space"
-    v-for="tag in tags"
+    v-for="(tag, index) in tags"
     :key="tag.name"
     closable
     :type="tag.type"
-    @close="handleClose"
+    @close="handleClose(index)"
   >{{tag.name}}</ur-tag>
   <br />
   <br />
@@ -34,8 +34,8 @@ export default {
     };
   },
   methods: {
-    handleClose(tag) {
-      this.tags.splice(this.tags.indexOf(tag), 1);
+    handleClose(index) {
+      this.tags.splice(index, 1);
     },
   },
 };
