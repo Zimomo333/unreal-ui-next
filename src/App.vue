@@ -90,12 +90,12 @@
       <p class="title">气泡</p>
       <tooltip-demo />
     </div>
-    <div>
+    <div style="margin-bottom: 16rem">
       <p class="title">下拉菜单</p>
       <drop-down-demo />
     </div>
     <div>
-      <p class="title">导航菜单</p>
+      <p class="title">导航栏</p>
       <menu-demo />
     </div>
     <div>
