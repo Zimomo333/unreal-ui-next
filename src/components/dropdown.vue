@@ -73,4 +73,7 @@
 .dropdown_demo .space {
   margin: 1rem;
 }
+.dropdown_demo svg {
+  vertical-align: middle;
+}
 </style>

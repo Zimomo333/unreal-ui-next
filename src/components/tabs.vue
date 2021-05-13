@@ -43,6 +43,9 @@ export default {
 <style>
 .tabs_wrap {
   margin: 0 auto;
-  width: 40%;
+  width: 35rem;
+}
+.ur-tab-pane {
+  height: 12rem;
 }
 </style>

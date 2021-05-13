@@ -1,8 +1,8 @@
 <template>
-  <ur-select class="select-space1" v-model="value1" placeholder="请选择">
+  <ur-select class="select-space" v-model="value1" placeholder="请选择">
     <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
   </ur-select>
-  <ur-select class="select-space1" v-model="value2" placeholder="请选择">
+  <ur-select class="select-space" v-model="value2" placeholder="请选择">
     <ur-option
       v-for="item in options2"
       :key="item.value"
@@ -11,18 +11,18 @@
       :disabled="item.disabled"
     ></ur-option>
   </ur-select>
-  <ur-select class="select-space1" v-model="value3" disabled placeholder="请选择">
+  <ur-select class="select-space" v-model="value3" disabled placeholder="请选择">
     <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
   </ur-select>
-  <ur-select class="select-space1" v-model="value3" clearable placeholder="请选择">
-    <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
-  </ur-select>
-
-  <ur-select class="select-space1" v-model="value4" multiple placeholder="请选择">
+  <ur-select class="select-space" v-model="value3" clearable placeholder="请选择">
     <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
   </ur-select>
 
-  <ur-select class="select-space1" v-model="value5" multiple collapse-tags placeholder="请选择">
+  <ur-select class="select-space" v-model="value4" multiple placeholder="请选择">
+    <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
+  </ur-select>
+
+  <ur-select class="select-space" v-model="value5" multiple collapse-tags placeholder="请选择">
     <ur-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></ur-option>
   </ur-select>
 </template>
@@ -88,9 +88,6 @@ export default {
 
 <style>
 .select-space {
-  margin: 1rem 1rem;
-}
-.select-space1 {
-  margin: 0 1rem 20rem;
+  margin: 0 1rem 14rem;
 }
 </style>

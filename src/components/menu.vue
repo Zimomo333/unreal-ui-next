@@ -106,7 +106,7 @@ export default {
 
 <style lang="scss">
 .menu_demo {
-  width: 15%;
+  width: 16rem;
   margin: 0 auto;
 }
 .menu_demo .icon {

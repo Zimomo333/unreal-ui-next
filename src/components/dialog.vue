@@ -2,7 +2,7 @@
 <template>
   <ur-button class="space" type="text" @click="dialogVisible = true">点击打开 Dialog</ur-button>
 
-  <ur-dialog title="提示" v-model="dialogVisible" width="30%" :before-close="handleClose">
+  <ur-dialog title="提示" v-model="dialogVisible" width="20rem" :before-close="handleClose">
     <span>这是一段信息</span>
     <template #footer>
       <span class="dialog-footer">
@@ -25,10 +25,10 @@
 
   <ur-button type="text" class="space" @click="dialogTableVisible = true">打开嵌套表格的 Dialog</ur-button>
 
-  <ur-dialog title="收货地址" v-model="dialogTableVisible">
+  <ur-dialog title="收货地址" v-model="dialogTableVisible" width="30rem">
     <ur-table :data="gridData">
-      <ur-table-column property="date" label="日期" width="150"></ur-table-column>
-      <ur-table-column property="name" label="姓名" width="200"></ur-table-column>
+      <ur-table-column property="date" label="日期" width="120"></ur-table-column>
+      <ur-table-column property="name" label="姓名" width="120"></ur-table-column>
       <ur-table-column property="address" label="地址"></ur-table-column>
     </ur-table>
   </ur-dialog>
@@ -45,22 +45,22 @@ export default {
       gridData: [
         {
           date: '2021-05-02',
-          name: '梁梓豪',
+          name: 'Zimomo',
           address: '广东省东莞市松山湖',
         },
         {
           date: '2021-05-02',
-          name: '梁梓豪',
+          name: 'Zimomo',
           address: '广东省东莞市松山湖',
         },
         {
           date: '2021-05-02',
-          name: '梁梓豪',
+          name: 'Zimomo',
           address: '广东省东莞市松山湖',
         },
         {
           date: '2021-05-02',
-          name: '梁梓豪',
+          name: 'Zimomo',
           address: '广东省东莞市松山湖',
         },
       ],

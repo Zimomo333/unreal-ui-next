@@ -1,4 +1,3 @@
-
 <template>
   <ur-button class="space" type="text" @click="openMessageBox">点击打开 Message Box</ur-button>
   <ur-button class="space" type="text" @click="openMessageBoxConfirm">确认消息</ur-button>

@@ -19,6 +19,6 @@
 <style>
 .breadcrumb_wrap {
   margin: 0 auto;
-  width: 40%;
+  width: 35rem;
 }
 </style>

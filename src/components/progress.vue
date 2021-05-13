@@ -61,7 +61,7 @@ export default {
   margin: 1rem 0;
 }
 .progress_wrap {
-  width: 40%;
+  width: 35rem;
   margin: 0 auto;
 }
 </style>

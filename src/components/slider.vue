@@ -67,7 +67,7 @@ export default {
 
 <style>
 .block {
-  width: 40rem;
+  width: 35rem;
   margin: 0 auto;
 }
 .vertical {
