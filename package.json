@@ -1,10 +1,10 @@
 {
   "name": "unreal-ui-next",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "author": "zimomo",
-  "description": "unreal-ui, vue3",
+  "description": "A Neumorphism design UI library based on Vue3.",
   "main": "lib/ur-index/index.js",
-  "keyword": "vue3 ui",
+  "keyword": "vue3 neumorphism ui",
   "license": "MIT",
   "private": false,
   "scripts": {
