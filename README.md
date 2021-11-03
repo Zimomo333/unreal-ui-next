@@ -19,3 +19,4 @@ A Neumorphism design UI library based on Vue3.
 
 4. 配套使用VitePress开发的使用指南网站，内嵌CodeSandbox在线代码运行平台，提供Demo展示与调试。 
 
+### 该项目为本人毕业设计，有许多不成熟的地方，不适合用于实际项目，仅作为学习记录。
