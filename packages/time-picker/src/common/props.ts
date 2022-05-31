@@ -11,6 +11,7 @@ export const defaultProps = {
   },
   format: {
     type: String,
+    default: '',
   },
   type: {
     type: String,
