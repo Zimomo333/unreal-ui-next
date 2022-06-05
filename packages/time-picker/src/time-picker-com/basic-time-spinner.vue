@@ -36,8 +36,12 @@
         class="ur-time-spinner__wrapper is-arrow"
         @mouseenter="emitSelectRange(item)"
       >
-        <i v-repeat-click="onDecreaseClick" class="ur-time-spinner__arrow ur-icon-arrow-up"></i>
-        <i v-repeat-click="onIncreaseClick" class="ur-time-spinner__arrow ur-icon-arrow-down"></i>
+        <i v-repeat-click="onDecreaseClick" class="ur-time-spinner__arrow ur-icon-arrow-up">
+          <svg t="1619009223659" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4372" width="20" height="20"><path d="M724.231168 170.105856L380.529664 510.181376l341.477376 345.111552c15.1552 15.154176 15.100928 39.7824-0.116736 55.000064-15.220736 15.220736-39.844864 15.271936-54.99392-3.771392L302.629888 542.255104c-4.916224-5.499904-10.561536-11.995136-11.497472-15.504384-5.75488-14.301184-2.874368-31.873024 8.63744-46.317568l369.355776-369.3568c15.284224-11.387904 40.022016-11.447296 55.243776 3.776512 15.217664 15.220736 15.158272 39.958528-0.13312 55.251968l-0.00512 0.001024z" p-id="4373" fill="#707070"></path></svg>
+        </i>
+        <i v-repeat-click="onIncreaseClick" class="ur-time-spinner__arrow ur-icon-arrow-down">
+          <svg t="1619009223659" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4372" width="20" height="20"><path d="M724.231168 170.105856L380.529664 510.181376l341.477376 345.111552c15.1552 15.154176 15.100928 39.7824-0.116736 55.000064-15.220736 15.220736-39.844864 15.271936-54.99392-3.771392L302.629888 542.255104c-4.916224-5.499904-10.561536-11.995136-11.497472-15.504384-5.75488-14.301184-2.874368-31.873024 8.63744-46.317568l369.355776-369.3568c15.284224-11.387904 40.022016-11.447296 55.243776 3.776512 15.217664 15.220736 15.158272 39.958528-0.13312 55.251968l-0.00512 0.001024z" p-id="4373" fill="#707070"></path></svg>
+        </i>
         <ul class="ur-time-spinner__list">
           <li
             v-for="(time, key) in arrowListMap[item].value"
