@@ -24,10 +24,8 @@
     <!-- <ur-progress class="progress" percentage="40" :color="customColor"></ur-progress> -->
 
     <ur-progress class="progress" type="circle" color="#18634b" :percentage="percentage"></ur-progress>
-    <ur-button-group>
-      <ur-button style="margin: 0 .5rem 0 1rem;" @click="decrease">减</ur-button>
-      <ur-button @click="increase">加</ur-button>
-    </ur-button-group>
+    <ur-button style="margin: 0 .5rem 0 1rem;" @click="decrease">减</ur-button>
+    <ur-button @click="increase">加</ur-button>
   </div>
 </template>
 

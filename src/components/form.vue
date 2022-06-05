@@ -119,7 +119,7 @@
             </svg>
           </ur-button>
         </a>
-        <a href="http://zimomo.top/" target="_blank">
+        <a href="http://zimomo333.top/" target="_blank">
           <ur-button class="space" circle>
             <svg
               t="1620688021085"
