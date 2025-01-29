@@ -9,7 +9,7 @@ A Neumorphism design UI library based on Vue3.
 <a href="https://npmjs.com/package/unreal-ui-next"><img src="https://img.shields.io/npm/v/unreal-ui-next.svg" alt="npm package"></a>
 </div>
 
-### &emsp;使用指南网站：http://unreal-ui.zimomo.xyz/
+### &emsp;使用指南网站：http://unreal-ui.zimomo.fun
 
 1. 基于Vue3封装了26种常用的UI组件，包括走马灯、导航栏、柱状图等。 
 
